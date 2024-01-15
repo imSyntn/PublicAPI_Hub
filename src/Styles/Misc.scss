@@ -1,0 +1,25 @@
+.LightBtn {
+    p {
+        color: rgb(251, 30, 30);
+    }
+}
+.DarkBtn {
+    p {
+        color: rgb(255, 255, 255);
+    }
+}
+.sunInDarkMode {
+    display: none;
+}
+.moonInDarkMode {
+    display: none;
+}
+.darkContainer {
+    background-color: black;
+}
+.lightContainer {
+    background-color: white;
+}
+.textInDarkMode {
+    color: rgba(255, 255, 255, 0.849);
+}
