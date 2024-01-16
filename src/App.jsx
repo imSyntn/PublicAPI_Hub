@@ -1,6 +1,8 @@
 import { useState, createContext } from 'react'
 import Header from './Components/Header';
 import ContentSection from './Components/ContentSection';
+import Heart from './Components/Heart';
+import Footer from './Components/Footer';
 
 export const ThemeContext = createContext();
 
@@ -16,6 +18,8 @@ function App() {
       <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
         <Header />
         <ContentSection />
+        <Heart />
+        <Footer />
       </div>
     </ThemeContext.Provider>
   )

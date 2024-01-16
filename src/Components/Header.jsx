@@ -10,18 +10,18 @@ import { HiMoon } from "react-icons/hi2";
 
 const Header = () => {
 
-    
-   const { currentTheme, setCurrentTheme } = useContext(ThemeContext)
 
-   useEffect(()=>{
-    console.log(currentTheme)
-   })
+    const { currentTheme, setCurrentTheme } = useContext(ThemeContext)
+
+    useEffect(() => {
+        console.log(currentTheme)
+    })
 
     return (
-        <header>
+        <header className={currentTheme.lightMode ? 'headerInLightMode' : 'headerInDarkMode'}>
             <div className="logo">
                 <img src={logo} alt="logo" />
-                <p className={currentTheme.lightMode? '' : 'textInDarkMode'}>PublicAPI_Hub</p>
+                <p className={currentTheme.lightMode ? '' : 'textInDarkMode'}>PublicAPI_Hub</p>
             </div>
             {/* <div className='headerMiddle'>
                 <a href="/" className={currentTheme.lightMode? '' : 'textInDarkMode'}>Home</a>
@@ -29,11 +29,11 @@ const Header = () => {
             </div> */}
             <div className="btns">
                 <div className="themeSwitcher">
-                    <HiSun onClick={()=> setCurrentTheme({
+                    <HiSun onClick={() => setCurrentTheme({
                         lightMode: true,
                         darkMode: false,
                     })} className={currentTheme.lightMode ? 'sunInDarkMode' : ''} />
-                    <HiMoon onClick={()=> setCurrentTheme({
+                    <HiMoon onClick={() => setCurrentTheme({
                         lightMode: false,
                         darkMode: true,
                     })} className={currentTheme.darkMode ? 'moonInDarkMode' : ''} />

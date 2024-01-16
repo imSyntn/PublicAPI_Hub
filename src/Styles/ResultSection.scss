@@ -1,0 +1,15 @@
+.ResultSection {
+    // border: 1px solid blue;
+    // height: calc(100% - 200px);
+    padding-inline: 100px;
+    padding-bottom: 25px;
+    >h1 {
+        margin-block: 10px;
+        font-size: 2.5rem;
+    }
+    >.results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

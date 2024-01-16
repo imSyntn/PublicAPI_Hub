@@ -1,11 +1,16 @@
 header {
     height: 50px;
     width: 100%;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 100px;
+    box-shadow: rgba(0, 0, 0, 0.034) 0px 5px 15px;
+    transition: all 0.1s;
+    
+//   -webkit-backdrop-filter: blur(5px);
+    // filter: blur(10px);
 
     > .logo {
         display: flex;
@@ -31,7 +36,7 @@ header {
         display: flex;
         align-items: center;
         >.themeSwitcher {
-            border: 1px solid blue;
+            // border: 1px solid blue;
             position: relative;
             height: 40px;
             width: 40px;
@@ -44,12 +49,20 @@ header {
                 transform: translate(-50%, -50%);
                 cursor: pointer;
                 &:nth-child(1) {
-                    fill: #FFBF26;
+                    fill: #ffffff;
                 }
                 &:nth-child(2) {
                     fill: black;
                     // display: none;
                 }
+            }
+        }
+        >.sponsor {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            >svg {
+                margin-right: 3px;
             }
         }
     }

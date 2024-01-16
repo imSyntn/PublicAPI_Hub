@@ -8,6 +8,14 @@
         color: rgb(255, 255, 255);
     }
 }
+.headerInDarkMode {
+    // background: #070709cc;
+    backdrop-filter: blur(5px);
+}
+.headerInLightMode {
+    // background: #ffffff83;
+    backdrop-filter: blur(4px);
+}
 .sunInDarkMode {
     display: none;
 }
@@ -15,11 +23,64 @@
     display: none;
 }
 .darkContainer {
-    background-color: black;
+    background-color: #070709;
+    // background-image: linear-gradient(to right, #434343 0%, black 100%);
+//     background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+//  background-blend-mode: multiply;
 }
 .lightContainer {
     background-color: white;
 }
 .textInDarkMode {
     color: rgba(255, 255, 255, 0.849);
+}
+.cardInDark {
+    // background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background: #14181a;
+    border: 1px solid #25292f;
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+}
+.cardInLight {
+    background: #f0f6fc;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+}
+.lightHeart {
+    border: 2px dashed #000000;
+}
+.darkHeart {
+    border: 2px dashed #ffffff;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes reverseRotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg) scale(1.1);
+    }
+    75% {
+        transform: rotate(-15deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
