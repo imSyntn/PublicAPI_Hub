@@ -11,16 +11,20 @@
     animation: rotate 5s infinite linear;
     backdrop-filter: blur(2px);
     cursor: pointer;
+
     >svg {
         font-size: 25px;
-        fill: #fa2a55;
+        // fill: #fa2a55;
+        fill: red;
         animation: reverseRotate 5s infinite linear;
     }
+
     &:hover {
         animation: none;
+
         >svg {
-                animation: shake 0.2s linear;
-                animation-iteration-count: calc(2);
+            animation: shake 0.2s linear;
+            animation-iteration-count: calc(2);
         }
     }
 }

@@ -1,14 +1,14 @@
 .ResultCards {
-    height: 150px;
+    min-height: 170px;
     width: 340px;
     margin: 10px;
     padding: 20px;
     // background: #f0f6fc;
     // background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     border-radius: 10px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: all 0.3s;
     >.logoImg {
         display: flex;
@@ -20,6 +20,16 @@
         }
         >h2 {
             font-size: 1.3rem;
+        }
+    }
+    >.options {
+        margin-top: 10px;
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >.cardSvgDiv {
+            display: flex;
         }
     }
 }

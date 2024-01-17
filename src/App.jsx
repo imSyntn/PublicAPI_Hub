@@ -7,26 +7,31 @@ import Footer from './Components/Footer';
 
 export const ThemeContext = createContext();
 export const showCatagoryContext = createContext();
+export const catagorySearchContext = createContext();
 
 function App() {
 
   const [currentTheme, setCurrentTheme] = useState({
-    lightMode: true,
-    darkMode: false
+    lightMode: false,
+    darkMode: true
   })
   const [showCatagory, setShowCatagory] = useState(false)
+  const [searchThis, setSearchThis] = useState(false)
+  const [fetchedData, setFetchedData] = useState(false)
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
-      <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
-        <Header />
-        <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
-          <CatagorySection />
-          <ContentSection />
-        </showCatagoryContext.Provider>
-        <Heart />
-        <Footer />
-      </div>
+      <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
+        <catagorySearchContext.Provider value={{ searchThis, setSearchThis,fetchedData, setFetchedData}}>
+          <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
+            <Header />
+            <CatagorySection />
+            <ContentSection />
+            <Heart />
+            <Footer />
+          </div>
+        </catagorySearchContext.Provider>
+      </showCatagoryContext.Provider>
     </ThemeContext.Provider>
   )
 }
