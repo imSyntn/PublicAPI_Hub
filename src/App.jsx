@@ -1,10 +1,12 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, createElement } from 'react'
 import Header from './Components/Header';
 import ContentSection from './Components/ContentSection';
+import CatagorySection from './Components/CatagorySection'
 import Heart from './Components/Heart';
 import Footer from './Components/Footer';
 
 export const ThemeContext = createContext();
+export const showCatagoryContext = createContext();
 
 function App() {
 
@@ -12,12 +14,16 @@ function App() {
     lightMode: true,
     darkMode: false
   })
+  const [showCatagory, setShowCatagory] = useState(false)
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
       <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
         <Header />
-        <ContentSection />
+        <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
+          <CatagorySection />
+          <ContentSection />
+        </showCatagoryContext.Provider>
         <Heart />
         <Footer />
       </div>

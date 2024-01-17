@@ -34,6 +34,18 @@
 .textInDarkMode {
     color: rgba(255, 255, 255, 0.849);
 }
+.catagoryInDark {
+    // background-image: linear-gradient(to right, #434343 0%, black 100%);
+    // background: #14181a;
+    border: 1px solid #25292f;
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+}
+.catagoryInLight {
+    // background: #f0f6fc;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+}
 .cardInDark {
     // background-image: linear-gradient(to right, #434343 0%, black 100%);
     background: #14181a;

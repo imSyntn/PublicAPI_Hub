@@ -3,7 +3,9 @@ import '../Styles/Footer.scss'
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <h1>PublicAPI Hub</h1>
+    </footer>
   )
 }
 

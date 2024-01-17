@@ -7,10 +7,10 @@
   color: gray;
   font-family: 'Roboto', sans-serif;
 }
-/* body {
-  background: black;
-  overflow: hidden;
-} */
+body {
+  /* background: black; */
+  overflow-x: hidden;
+}
 .main {
   /* height: 100dvh; */
   width: 100%;

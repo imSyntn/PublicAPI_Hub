@@ -10,12 +10,7 @@ import { HiMoon } from "react-icons/hi2";
 
 const Header = () => {
 
-
     const { currentTheme, setCurrentTheme } = useContext(ThemeContext)
-
-    useEffect(() => {
-        console.log(currentTheme)
-    })
 
     return (
         <header className={currentTheme.lightMode ? 'headerInLightMode' : 'headerInDarkMode'}>
