@@ -14,20 +14,21 @@ const CatagorySection = () => {
   const { setSearchThis } = useContext(catagorySearchContext)
 
   useEffect(() => {
-    setCatagories([])
-    fetch('https://public-apis-api-seven.vercel.app/catagories', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        // Add any additional headers if needed
-      },
-    })
-      .then(res => res.json())
-      .then(data =>
-        setCatagories(data.entries)
-        // console.log(data)
-      )
-      .catch(e => console.log(e))
+    if (catagories.length === 0) {
+      fetch('https://public-apis-api-seven.vercel.app/catagories', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any additional headers if needed
+        },
+      })
+        .then(res => res.json())
+        .then(data =>
+          setCatagories(data.entries)
+          // console.log(data)
+        )
+        .catch(e => console.log(e))
+    }
   }, [])
 
   return (
@@ -37,7 +38,7 @@ const CatagorySection = () => {
       <div className="catagory-data">
         {
           catagories.map((item, i) => (
-            <p key={i} onClick={() => setSearchThis(item.name)}>{item.name}</p>
+            <p key={i} className='selected' onClick={() => setSearchThis(item.name)}>{item.name}</p>
           ))
         }
       </div>

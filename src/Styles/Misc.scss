@@ -1,11 +1,13 @@
+$inlinePadding: 100px; 
+
 .LightBtn {
     p {
-        color: rgb(251, 30, 30);
+        // color: rgb(255, 255, 255);
     }
 }
 .DarkBtn {
     p {
-        color: rgb(255, 255, 255);
+        // color: rgb(255, 255, 255);
     }
 }
 .headerInDarkMode {
@@ -64,6 +66,32 @@
 .darkHeart {
     border: 2px dashed #ffffff;
 }
+
+// .catagoryOpened {
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0px;
+//         height: 40px;
+//         width: 100px;
+//         background: red;
+
+//     }
+// }
+
+// .x {
+//     &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: -100px;
+//     height: 40px;
+//     width: 100px;
+//     background: red;
+
+// }
+// }
 
 
 @keyframes rotate {

@@ -10,6 +10,7 @@
     justify-content: center;
     animation: rotate 5s infinite linear;
     backdrop-filter: blur(2px);
+    z-index: 7;
     cursor: pointer;
 
     >svg {

@@ -1,7 +1,36 @@
+@import './Misc.scss';
+
 footer {
+    margin-top: 50px;
+    padding-inline: $inlinePadding;
     color: black;
     height: 200px;
     width: 100%;
     // background: #f0f6fc;
-    border: 1px dotted green;
+    border-top: 1px solid #1b1e23;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >.logoImg {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    >.icons {
+
+        // width: 100%;
+        svg {
+            font-size: 35px;
+            margin: 10px;
+            transition: fill 0.3s;
+            &:hover {
+                fill: white;
+            }
+        }
+    }
 }

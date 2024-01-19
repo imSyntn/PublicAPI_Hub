@@ -13,7 +13,7 @@ const SearchingContainer = ({catagoryContextProp}) => {
                 <input type="text" placeholder='Search ...' />
                 <Button Icon={ImSearch} />
             </div>
-            <Button text={'Catagories'} clickEvent={handleClick} />
+            <Button text={'Catagories'} showX={true} clickEvent={handleClick} />
         </div>
     )
 }
