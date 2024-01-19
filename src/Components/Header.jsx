@@ -24,16 +24,22 @@ const Header = () => {
             </div> */}
             <div className="btns">
                 <div className="themeSwitcher">
-                    <HiSun onClick={() => setCurrentTheme({
-                        lightMode: true,
-                        darkMode: false,
-                    })} className={currentTheme.lightMode ? 'sunInDarkMode' : ''} />
-                    <HiMoon onClick={() => setCurrentTheme({
-                        lightMode: false,
-                        darkMode: true,
-                    })} className={currentTheme.darkMode ? 'moonInDarkMode' : ''} />
+                    <HiSun onClick={() => {
+                        setCurrentTheme({
+                            lightMode: true,
+                            darkMode: false,
+                        });
+                        localStorage.setItem('lightMode', 'true')
+                    }} className={currentTheme.lightMode ? 'sunInDarkMode' : ''} />
+                    <HiMoon onClick={() => {
+                        setCurrentTheme({
+                            lightMode: false,
+                            darkMode: true,
+                        })
+                        localStorage.setItem('lightMode', 'false')
+                    }} className={currentTheme.darkMode ? 'moonInDarkMode' : ''} />
                 </div>
-                <Button text={'Login'} />
+                <Button text={'Login'} animation={true} />
             </div>
         </header>
     )

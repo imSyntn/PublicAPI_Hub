@@ -27,12 +27,13 @@
             }
         }
 
-        >.Button {
+        .Button {
             width: 41px;
             border: 2px solid #393d47;
             border-left: none;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
+            background-color: transparent;
 
             >svg {
                 font-size: 20px;
@@ -51,7 +52,8 @@
             }
         }
     }
-    >button {
+    >div>button {
         border-radius: 10px;
+        background-color: transparent;
     }
 }

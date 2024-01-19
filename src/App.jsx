@@ -1,4 +1,4 @@
-import { useState, createContext, createElement } from 'react'
+import { useState, createContext, useEffect } from 'react'
 import Header from './Components/Header';
 import ContentSection from './Components/ContentSection';
 import CatagorySection from './Components/CatagorySection'
@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 
 export const ThemeContext = createContext();
 export const showCatagoryContext = createContext();
-export const catagorySearchContext = createContext();
+export const SearchContext = createContext();
 
 function App() {
 
@@ -16,13 +16,46 @@ function App() {
     darkMode: true
   })
   const [showCatagory, setShowCatagory] = useState(false)
-  const [searchThis, setSearchThis] = useState(false)
+  const [searchThis, setSearchThis] = useState({
+    catagorySearch: false,
+    inputSearch: false,
+  })
   const [fetchedData, setFetchedData] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem('lightMode') === null) {
+      localStorage.setItem('lightMode', 'false')
+    } else {
+      if (localStorage.getItem('lightMode') === 'true') {
+        setCurrentTheme({
+          lightMode: true,
+          darkMode: false,
+        })
+      } else {
+        setCurrentTheme({
+          lightMode: false,
+          darkMode: true,
+        })
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    setFetchedData(false)
+    fetch('https://public-apis-api-seven.vercel.app/random', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(data => data.json())
+      .then(res => setFetchedData(res))
+      .catch(e => console.log(e))
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
       <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
-        <catagorySearchContext.Provider value={{ searchThis, setSearchThis,fetchedData, setFetchedData}}>
+        <SearchContext.Provider value={{ searchThis, setSearchThis, fetchedData, setFetchedData }}>
           <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
             <Header />
             <CatagorySection />
@@ -30,7 +63,7 @@ function App() {
             <Heart />
             <Footer />
           </div>
-        </catagorySearchContext.Provider>
+        </SearchContext.Provider>
       </showCatagoryContext.Provider>
     </ThemeContext.Provider>
   )

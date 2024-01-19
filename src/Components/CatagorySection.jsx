@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import '../Styles/CatagorySection.scss'
 import { showCatagoryContext } from '../App'
 import { ThemeContext } from '../App'
-import { catagorySearchContext } from '../App'
+import { SearchContext } from '../App'
 
 const a = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
@@ -11,7 +11,7 @@ const CatagorySection = () => {
   const { showCatagory } = useContext(showCatagoryContext)
   const { currentTheme } = useContext(ThemeContext)
   const [catagories, setCatagories] = useState([])
-  const { setSearchThis } = useContext(catagorySearchContext)
+  const { setSearchThis } = useContext(SearchContext)
 
   useEffect(() => {
     if (catagories.length === 0) {
@@ -38,12 +38,14 @@ const CatagorySection = () => {
       <div className="catagory-data">
         {
           catagories.map((item, i) => (
-            <p key={i} className='selected' onClick={() => setSearchThis(item.name)}>{item.name}</p>
+            <p key={i} className='selected' onClick={() => setSearchThis({
+              catagorySearch: item.name,
+              inputSearch: false,
+            })}>{item.name}</p>
           ))
         }
       </div>
     </div>
-    // </div>
   )
 }
 

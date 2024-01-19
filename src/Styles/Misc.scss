@@ -1,6 +1,7 @@
 $inlinePadding: 100px; 
 
 .LightBtn {
+    background: white;
     p {
         // color: rgb(255, 255, 255);
     }
@@ -35,6 +36,7 @@ $inlinePadding: 100px;
 }
 .textInDarkMode {
     color: rgba(255, 255, 255, 0.849);
+    // background: url('https://i.gifer.com/8VvO.gif');
 }
 .catagoryInDark {
     // background-image: linear-gradient(to right, #434343 0%, black 100%);

@@ -6,5 +6,10 @@
     justify-content: center;
     >h1 {
         font-size: 3rem;
+        background: url('https://i.gifer.com/8VvO.gif');
+        // background: url('https://i.gifer.com/1uUd.gif');
+        background-clip: text;
+        color: transparent;
+        background-size: cover;
     }
 }
