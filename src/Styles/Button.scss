@@ -6,12 +6,9 @@
     background-color: black;
     position: relative;
     box-shadow: 0 0 0 #e595ff, 0 0 48px rgba(130, 26, 250, 0.5);
-    // z-index: 8;
     overflow: hidden;
 
     p {
-        // color: #FFBF26;
-        // padding-inline: 15px;
         font-weight: 700;
         font-size: 17px;
     }
@@ -33,7 +30,6 @@
         }
 
         .icon {
-            // border: 1px solid greenyellow;
             display: flex;
             width: 100px;
             height: 40px;
@@ -74,7 +70,6 @@
     position: relative;
         width: 105px;
         height: 45px;
-        // background: red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -89,7 +84,7 @@
         background: rgb(205, 50, 50);
         background: url('https://i.gifer.com/1uUd.gif');
         background-size: cover;
-        transition: filter 0.3s;
+        transition: filter 0.2s;
     }
     &:hover::before {
         filter: blur(15px);

@@ -4,6 +4,7 @@ import ContentSection from './Components/ContentSection';
 import CatagorySection from './Components/CatagorySection'
 import Heart from './Components/Heart';
 import Footer from './Components/Footer';
+import PreLoader from './Components/PreLoader';
 
 export const ThemeContext = createContext();
 export const showCatagoryContext = createContext();
@@ -57,6 +58,7 @@ function App() {
       <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
         <SearchContext.Provider value={{ searchThis, setSearchThis, fetchedData, setFetchedData }}>
           <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
+            {/* <PreLoader theme={currentTheme.lightMode} /> */}
             <Header />
             <CatagorySection />
             <ContentSection />

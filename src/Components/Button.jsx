@@ -2,15 +2,17 @@ import React, { useContext } from 'react'
 import '../Styles/Button.scss'
 import '../Styles/Misc.scss'
 import { showCatagoryContext } from '../App'
+import { ThemeContext } from '../App'
 import { RxCross1 } from "react-icons/rx";
 
 const Button = ({ Icon, text, clickEvent, showX, animation }) => {
 
+  const { currentTheme, setCurrentTheme } = useContext(ThemeContext)
   const { showCatagory } = useContext(showCatagoryContext)
 
   return (
-    <div className={animation ? 'btnBorderAnimation' : ''}>
-      <button className={`Button ${localStorage.getItem('lightMode')==='true' && 'LightBtn'}`} onClick={clickEvent}>
+    <div className={animation && 'btnBorderAnimation'}>
+      <button className={`Button ${currentTheme.lightMode && 'LightBtn'}`} onClick={clickEvent}>
         {
           showX ? (
             <div className={`btnCont ${showCatagory ? 'open' : 'close'}`}>
@@ -21,7 +23,7 @@ const Button = ({ Icon, text, clickEvent, showX, animation }) => {
             : (
               <>
                 {Icon && <Icon />}
-                {text && <p className={animation ? 'btnAnimation' : ''}>{text}</p>}
+                {text && <p className={animation && 'btnAnimation'}>{text}</p>}
               </>
             )
         }

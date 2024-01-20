@@ -1,6 +1,17 @@
 .ContentSection {
     padding-top: 50px;
-    // background: rgb(65, 65, 65);
-    // overflow-y:auto;
-    // height: 100vh;
+    >.bottomOverlay {
+        position: fixed;
+        top: 50px;
+        
+        width: 100%;
+        
+        z-index: 2;
+    }
+    >.overlay {
+        height: 200px;
+        position: relative;
+        pointer-events: none;
+        z-index: 3;
+    }
 }

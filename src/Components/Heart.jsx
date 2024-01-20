@@ -1,16 +1,21 @@
-import React, { useContext } from 'react'
+import React, {useRef} from 'react'
 import '../Styles/Heart.scss'
-import '../Styles/Misc.scss'
-import { ThemeContext } from '../App';
-import { FaHeart } from "react-icons/fa";
+import { Player } from '@lottiefiles/react-lottie-player'
+import heart from '../Assets/heart.json'
+import circle from '../Assets/circle.json'
 
 const Heart = () => {
 
-    const { currentTheme } = useContext(ThemeContext)
+    const playerRef = useRef(null)
+
+    const handlePlay = () => {
+        playerRef.current.play()
+    }
 
     return (
-        <div className={`Heart ${currentTheme.lightMode? 'lightHeart' : 'darkHeart'}`}>
-            <FaHeart />
+        <div className="Heart" onClick={handlePlay}>
+            <Player src={circle} className='crcl' style={{width: '100px'}} autoplay loop />
+            <Player src={heart} className='hrt' autoplay style={{width: '100px'}} loop ref={playerRef} />
         </div>
     )
 }

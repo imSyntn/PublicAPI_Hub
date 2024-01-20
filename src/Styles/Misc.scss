@@ -2,21 +2,13 @@ $inlinePadding: 100px;
 
 .LightBtn {
     background: white;
-    p {
-        // color: rgb(255, 255, 255);
-    }
 }
-.DarkBtn {
-    p {
-        // color: rgb(255, 255, 255);
-    }
-}
+// .DarkBtn { 
+// }
 .headerInDarkMode {
-    // background: #070709cc;
     backdrop-filter: blur(5px);
 }
 .headerInLightMode {
-    // background: #ffffff83;
     backdrop-filter: blur(4px);
 }
 .sunInDarkMode {
@@ -27,34 +19,30 @@ $inlinePadding: 100px;
 }
 .darkContainer {
     background-color: #070709;
-    // background-image: linear-gradient(to right, #434343 0%, black 100%);
-//     background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-//  background-blend-mode: multiply;
 }
 .lightContainer {
     background-color: white;
 }
 .textInDarkMode {
     color: rgba(255, 255, 255, 0.849);
-    // background: url('https://i.gifer.com/8VvO.gif');
+}
+.h1InDarkMode {
+    background: url('https://i.gifer.com/3OhBA.gif');
+}
+.h1InLightMode {
+    background: url('https://i.gifer.com/8VvO.gif');
 }
 .catagoryInDark {
-    // background-image: linear-gradient(to right, #434343 0%, black 100%);
-    // background: #14181a;
     border: 1px solid #25292f;
-    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
 .catagoryInLight {
-    // background: #f0f6fc;
     border: 1px solid transparent;
     box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
 }
 .cardInDark {
-    // background-image: linear-gradient(to right, #434343 0%, black 100%);
     background: #14181a;
     border: 1px solid #25292f;
-    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
 .cardInLight {
@@ -67,62 +55,4 @@ $inlinePadding: 100px;
 }
 .darkHeart {
     border: 2px dashed #ffffff;
-}
-
-// .catagoryOpened {
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0px;
-//         height: 40px;
-//         width: 100px;
-//         background: red;
-
-//     }
-// }
-
-// .x {
-//     &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: -100px;
-//     height: 40px;
-//     width: 100px;
-//     background: red;
-
-// }
-// }
-
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes reverseRotate {
-    from {
-        transform: rotate(360deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(15deg) scale(1.1);
-    }
-    75% {
-        transform: rotate(-15deg) scale(1.1);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
 }

@@ -41,14 +41,6 @@
 
             &:hover {
                 border: 2px solid #646d7d;
-
-                >svg {
-                    font-size: 22px;
-                    fill: #646d7d;
-                    // transform: rotate(25deg);
-                    animation: shake 0.2s linear;
-                    transition: all 0.3s;
-                }
             }
         }
     }
