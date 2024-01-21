@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React, { memo, useContext } from 'react'
 import '../Styles/Button.scss'
 import '../Styles/Misc.scss'
-import { showCatagoryContext } from '../App'
+// import { showCatagoryContext } from '../App'
 import { ThemeContext } from '../App'
 import { RxCross1 } from "react-icons/rx";
 
-const Button = ({ Icon, text, clickEvent, showX, animation }) => {
+const Button = ({ Icon, text, clickEvent, showX, animation, showCatagory }) => {
 
   const { currentTheme, setCurrentTheme } = useContext(ThemeContext)
-  const { showCatagory } = useContext(showCatagoryContext)
+  // const { showCatagory } = useContext(showCatagoryContext)
 
   return (
     <div className={animation && 'btnBorderAnimation'}>
@@ -32,4 +32,4 @@ const Button = ({ Icon, text, clickEvent, showX, animation }) => {
   )
 }
 
-export default Button
+export default memo(Button)

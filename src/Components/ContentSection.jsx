@@ -5,17 +5,18 @@ import SearchingContainer from './SearchingContainer'
 import HeroSection from './HeroSection'
 // import CatagorySection from './CatagorySection'
 import ResultSection from './ResultSection'
-import { showCatagoryContext } from '../App'
+// import { showCatagoryContext } from '../App'
 
 const ContentSection = () => {
 
-    const { setShowCatagory } = useContext(showCatagoryContext)
+    // const { setShowCatagory } = useContext(showCatagoryContext)
 
     return (
         <div className='ContentSection'>
             <div className="bottomOverlay">
                 <HeroSection />
-                <SearchingContainer catagoryContextProp={setShowCatagory} />
+                {/* <SearchingContainer catagoryContextProp={setShowCatagory} /> */}
+                <SearchingContainer />
             </div>
             <div className="overlay">
             </div>

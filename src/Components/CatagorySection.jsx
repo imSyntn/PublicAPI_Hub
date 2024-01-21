@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../Styles/CatagorySection.scss'
-import { showCatagoryContext } from '../App'
+// import { showCatagoryContext } from '../App'
 import { ThemeContext } from '../App'
 import { SearchContext } from '../App'
 
 const a = [1, 1, 1, 1, 1, 1]
 
-const CatagorySection = () => {
+const CatagorySection = ({showCatagory}) => {
 
-  const { showCatagory } = useContext(showCatagoryContext)
+  // const { showCatagory } = useContext(showCatagoryContext)
   const { currentTheme } = useContext(ThemeContext)
   const [catagories, setCatagories] = useState([])
   const { setSearchThis } = useContext(SearchContext)

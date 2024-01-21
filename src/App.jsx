@@ -16,7 +16,7 @@ function App() {
     lightMode: false,
     darkMode: true
   })
-  const [showCatagory, setShowCatagory] = useState(false)
+  // const [showCatagory, setShowCatagory] = useState(false)
   const [searchThis, setSearchThis] = useState({
     catagorySearch: false,
     inputSearch: false,
@@ -55,18 +55,18 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
-      <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
+      {/* <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}> */}
         <SearchContext.Provider value={{ searchThis, setSearchThis, fetchedData, setFetchedData }}>
           <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
             {/* <PreLoader theme={currentTheme.lightMode} /> */}
             <Header />
-            <CatagorySection />
+            {/* <CatagorySection /> */}
             <ContentSection />
             <Heart />
             <Footer />
           </div>
         </SearchContext.Provider>
-      </showCatagoryContext.Provider>
+      {/* </showCatagoryContext.Provider> */}
     </ThemeContext.Provider>
   )
 }
