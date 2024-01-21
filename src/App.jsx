@@ -22,6 +22,19 @@ function App() {
     inputSearch: false,
   })
   const [fetchedData, setFetchedData] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+
+  useEffect(() => {
+    const onload = () => {
+      setTimeout(()=>setLoading(false),500)
+    }
+    window.addEventListener('load', onload)
+
+    return () => {
+      window.removeEventListener('load', onload)
+    }
+  }, [])
 
   useEffect(() => {
     if (localStorage.getItem('lightMode') === null) {
@@ -54,20 +67,26 @@ function App() {
   }, [])
 
   return (
-    <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
-      <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
-        <SearchContext.Provider value={{ searchThis, setSearchThis, fetchedData, setFetchedData }}>
-          <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
-            {/* <PreLoader theme={currentTheme.lightMode} /> */}
-            <Header />
-            <CatagorySection />
-            <ContentSection />
-            {/* <Heart /> */}
-            <Footer />
-          </div>
-        </SearchContext.Provider>
-      </showCatagoryContext.Provider>
-    </ThemeContext.Provider>
+    <>
+      {
+        loading ? (<PreLoader theme={currentTheme.lightMode} />) : (
+          <ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
+            <showCatagoryContext.Provider value={{ showCatagory, setShowCatagory }}>
+              <SearchContext.Provider value={{ searchThis, setSearchThis, fetchedData, setFetchedData }}>
+                <div className={`main ${currentTheme.lightMode ? 'lightContainer' : 'darkContainer'}`}>
+                  <Header />
+                  <CatagorySection />
+                  <ContentSection />
+                  {/* <Heart /> */}
+                  <Footer />
+                </div>
+              </SearchContext.Provider>
+            </showCatagoryContext.Provider>
+          </ThemeContext.Provider>
+        )
+      }
+
+    </>
   )
 }
 
