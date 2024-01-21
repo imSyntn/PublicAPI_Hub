@@ -27,5 +27,9 @@
         // -webkit-background-clip: text;
         // color: transparent;
         // background-size: cover;
+        @media screen and (max-width:550px) {
+            font-size: 1rem;
+            font-weight: 400;
+        }
     }
 }

@@ -19,7 +19,7 @@ const ContentSection = () => {
             </div>
             <div className="overlay">
             </div>
-                <ResultSection />
+            <ResultSection />
         </div>
     )
 }

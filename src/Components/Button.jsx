@@ -12,7 +12,7 @@ const Button = ({ Icon, text, clickEvent, showX, animation }) => {
 
   return (
     <div className={animation && 'btnBorderAnimation'}>
-      <button className={`Button ${currentTheme.lightMode && 'LightBtn'}`} onClick={clickEvent}>
+      <button className={`Button ${currentTheme.lightMode && 'LightBtn'} ${showX && showCatagory && 'slideLeft'}`} onClick={clickEvent}>
         {
           showX ? (
             <div className={`btnCont ${showCatagory ? 'open' : 'close'}`}>

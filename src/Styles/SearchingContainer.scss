@@ -1,7 +1,8 @@
 .searchingContainer {
     // border: 1px solid brown;
-    height: 50px;
+    min-height: 50px;
     display: flex;
+    // flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
@@ -47,5 +48,29 @@
     >div>button {
         border-radius: 10px;
         background-color: transparent;
+    }
+    @media screen and (max-width: 690px) {
+        padding-inline: 10px;
+        >.srch {
+            margin-right: 0;
+            input {
+                width: calc(100vw - 100px);
+            }
+        }
+    }
+    @media screen and (max-width: 690px) {
+        flex-direction: column;
+        >div>button {
+            margin-top: 7px;
+            transition: all 0.3s;
+        }
+    }
+    @media screen and (max-width:502px) {
+        >div > .slideLeft {
+            // position: absolute;
+            transform: translateX(-100px);
+            // left: -50px;
+            // border-style: dashed;
+        }
     }
 }

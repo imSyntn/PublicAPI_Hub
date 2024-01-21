@@ -9,8 +9,16 @@ footer {
     // background: #f0f6fc;
     border-top: 1px solid #1b1e23;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width:900px) {
+        padding-inline: 20px;
+    }
+    @media screen and (max-width:550px) {
+        // fl
+    }
 
     >.logoImg {
         display: flex;
@@ -24,7 +32,6 @@ footer {
     }
 
     >.icons {
-
         // width: 100%;
         svg {
             font-size: 35px;

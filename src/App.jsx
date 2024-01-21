@@ -62,7 +62,7 @@ function App() {
             <Header />
             <CatagorySection />
             <ContentSection />
-            <Heart />
+            {/* <Heart /> */}
             <Footer />
           </div>
         </SearchContext.Provider>
