@@ -9,7 +9,7 @@ import { MdOutlineVpnKey } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 import { TbShare } from "react-icons/tb";
-import { TbShareOff } from "react-icons/tb";import { GrLinkNext } from "react-icons/gr";
+import { GrLinkNext } from "react-icons/gr";
 
 const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { memo, useContext } from 'react'
 import '../Styles/Button.scss'
 import '../Styles/Misc.scss'
 import { showCatagoryContext } from '../App'
@@ -32,4 +32,4 @@ const Button = ({ Icon, text, clickEvent, showX, animation }) => {
   )
 }
 
-export default Button
+export default memo(Button)

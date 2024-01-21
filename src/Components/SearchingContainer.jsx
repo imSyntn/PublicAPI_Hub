@@ -3,16 +3,18 @@ import '../Styles/SearchingContainer.scss'
 import Button from './Button'
 import { SearchContext } from '../App'
 import { ImSearch } from "react-icons/im";
+import { useCallback } from 'react';
+import { memo } from 'react';
 
 const SearchingContainer = ({ catagoryContextProp }) => {
     const { setSearchThis, fetchedData, setFetchedData } = useContext(SearchContext)
     const [nameSearch, setNameSearch] = useState('')
 
-    const catagoryBtnClick = () => {
+    const catagoryBtnClick = useCallback(() => {
         catagoryContextProp(prev => !prev)
-    }
+    },[])
 
-    const searchBtnClick = () => {
+    const searchBtnClick = useCallback(() => {
         if (nameSearch !== '') {
             setFetchedData(false);
             fetch(`https://public-apis-api-seven.vercel.app/search/${nameSearch}`, {
@@ -31,7 +33,7 @@ const SearchingContainer = ({ catagoryContextProp }) => {
                 inputSearch: nameSearch,
             })
         }
-    }
+    },[nameSearch])
 
     return (
         <div className="searchingContainer">
@@ -44,4 +46,4 @@ const SearchingContainer = ({ catagoryContextProp }) => {
     )
 }
 
-export default SearchingContainer
+export default memo(SearchingContainer)
