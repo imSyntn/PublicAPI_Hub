@@ -30,18 +30,21 @@
 
         .Button {
             width: 41px;
-            border: 2px solid #393d47;
+            border: 2px solid #473939;
             border-left: none;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             background-color: transparent;
+            // transition: all 0.3s;
 
             >svg {
                 font-size: 20px;
             }
 
             &:hover {
-                border: 2px solid #646d7d;
+                border-left: 3px solid #646d7d;
+                // border-left: none;
+                outline: 2px solid #646d7d;
             }
         }
     }

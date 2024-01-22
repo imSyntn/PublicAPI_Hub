@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { memo, useContext } from 'react'
 import '../Styles/ResultCards.scss'
 import '../Styles/Misc.scss'
 import Skeleton from 'react-loading-skeleton'
@@ -13,10 +13,10 @@ import { GrLinkNext } from "react-icons/gr";
 
 const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
 
-  const { currentTheme } = useContext(ThemeContext)
+  const { darkMode, setDarkMode } = useContext(ThemeContext)
 
   return (
-    <div className={`ResultCards ${currentTheme.lightMode ? 'cardInLight' : 'cardInDark'}`}>
+    <div className={`ResultCards ${!darkMode ? 'cardInLight' : 'cardInDark'}`}>
       <div className="logoImg">
         {
           name ? (
@@ -92,4 +92,4 @@ const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
   )
 }
 
-export default ResultCards
+export default memo(ResultCards)

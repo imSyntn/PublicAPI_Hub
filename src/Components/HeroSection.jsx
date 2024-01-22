@@ -5,17 +5,14 @@ import { ThemeContext } from '../App'
 
 const HeroSection = () => {
 
-    const { currentTheme } = useContext(ThemeContext)
+    const { darkMode } = useContext(ThemeContext)
 
     return (
         <>
         <div className="heroSection">
-            <h1 className={currentTheme.lightMode ? 'h1InLightMode' : 'h1InDarkMode'}>Explore</h1>
-            <p className={currentTheme.lightMode ? '' : 'textInDarkMode'}>More than 1400+ public APIs to power-up your Project.</p>
+            <h1 className={!darkMode ? 'h1InLightMode' : 'h1InDarkMode'}>Explore</h1>
+            <p className={!darkMode ? '' : 'textInDarkMode'}>More than 1400+ public APIs to power-up your Project.</p>
         </div>
-        {/* <div className="heroSectionOverlay">
-
-        </div> */}
         </>
     )
 }

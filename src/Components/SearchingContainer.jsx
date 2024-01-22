@@ -1,47 +1,43 @@
 import React, { useEffect, useState, useContext } from 'react'
 import '../Styles/SearchingContainer.scss'
 import Button from './Button'
-import { SearchContext } from '../App'
+// import { SearchContext } from '../App'
 import { ImSearch } from "react-icons/im";
 import { useCallback } from 'react';
 import { memo } from 'react';
+import HeaderBtn from './HeaderBtn';
+import { searchContext } from '../App';
+// import CatagorySection from './CatagorySection';
+import { showCatagoryContext } from '../App';
 
-const SearchingContainer = ({ catagoryContextProp }) => {
-    const { setSearchThis, fetchedData, setFetchedData } = useContext(SearchContext)
+const SearchingContainer = () => {
+
+    const { catagory, setCatagory } = useContext(showCatagoryContext)
+    const { searchIt, setSearchIt } = useContext(searchContext)
     const [nameSearch, setNameSearch] = useState('')
 
+    // useEffect(()=>{
+    //     console.log(catagory)
+    // },[catagory])
+
     const catagoryBtnClick = useCallback(() => {
-        catagoryContextProp(prev => !prev)
-    },[])
+        setCatagory(prev => !prev)
+    }, [])
 
     const searchBtnClick = useCallback(() => {
-        if (nameSearch !== '') {
-            setFetchedData(false);
-            fetch(`https://public-apis-api-seven.vercel.app/search/${nameSearch}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-                .then(data => data.json())
-                .then(res => {
-                    setFetchedData(res)
-                })
-                .catch(e => console.log(e))
-            setSearchThis({
-                catagorySearch: false,
-                inputSearch: nameSearch,
-            })
-        }
-    },[nameSearch])
+        nameSearch.length > 1 && setSearchIt({
+            name: nameSearch,
+            type: 'input'
+        })
+    }, [nameSearch])
 
     return (
         <div className="searchingContainer">
             <div className="srch">
                 <input type="text" placeholder='Search ...' onChange={(e) => setNameSearch(e.target.value)} value={nameSearch} />
-                <Button Icon={ImSearch} clickEvent={searchBtnClick} />
+                <HeaderBtn Icon={ImSearch} clickEvent={searchBtnClick} />
             </div>
-            <Button text={'Catagories'} showX={true} clickEvent={catagoryBtnClick} />
+            <Button text={'Catagories'} clickEvent={catagoryBtnClick} />
         </div>
     )
 }

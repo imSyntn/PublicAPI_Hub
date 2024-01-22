@@ -7,20 +7,19 @@
     top: 0;
     right: 0;
     width: 300px;
+    z-index: 9;
     overflow-y: auto;
     transition: all 0.3s;
 }
 .CatagorySection {
     backdrop-filter: blur(3px);
     padding-inline: 20px;
-
     position: fixed;
     height: 100dvh;
     width: 200px;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    z-index: 6;
     transition: all 0.5s;
     >h2 {
         padding-block: 15px;

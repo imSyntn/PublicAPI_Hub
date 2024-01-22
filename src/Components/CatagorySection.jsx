@@ -1,44 +1,30 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { memo, useContext, useEffect, useState } from 'react'
 import '../Styles/CatagorySection.scss'
-import { showCatagoryContext } from '../App'
 import { ThemeContext } from '../App'
-import { SearchContext } from '../App'
+import { showCatagoryContext } from '../App'
+import { searchContext } from '../App';
+import useFetch from '../Hook/useFetch'
 
-const a = [1, 1, 1, 1, 1, 1]
 
 const CatagorySection = () => {
 
-  const { showCatagory } = useContext(showCatagoryContext)
-  const { currentTheme } = useContext(ThemeContext)
-  const [catagories, setCatagories] = useState([])
-  const { setSearchThis } = useContext(SearchContext)
-
-  useEffect(() => {
-    if (catagories.length === 0) {
-      fetch('https://public-apis-api-seven.vercel.app/catagories', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(data =>
-          setCatagories(data.entries)
-        )
-        .catch(e => console.log(e))
-    }
-  }, [])
+  const { searchIt, setSearchIt } = useContext(searchContext)
+  const { catagoryNameData } = useFetch(searchIt)
+  const { catagory, setCatagory } = useContext(showCatagoryContext)
+  const { darkMode, setDarkMode } = useContext(ThemeContext)
 
   return (
-    <div className={`CatagorySection ${showCatagory ? 'visibleCatagory' : 'hiddenCatagory'} ${currentTheme.lightMode ? 'catagoryInLight' : 'catagoryInDark'}`}>
+    <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}>
       <h2>Catagories</h2>
       <div className="catagory-data">
         {
-          catagories.map((item, i) => (
-            <p key={i} onClick={() => setSearchThis({
-              catagorySearch: item.name,
-              inputSearch: false,
-            })}>{item.name}</p>
+          catagoryNameData.map((item, i) => (
+            <p key={i}
+              onClick={() => setSearchIt({
+                name: item.name,
+                type: 'catagory'
+              })}
+            >{item.name}</p>
           ))
         }
       </div>
@@ -46,4 +32,4 @@ const CatagorySection = () => {
   )
 }
 
-export default CatagorySection
+export default memo(CatagorySection)

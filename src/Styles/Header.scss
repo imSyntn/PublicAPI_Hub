@@ -11,8 +11,8 @@ header {
     padding-inline: $inlinePadding;
     box-shadow: rgba(0, 0, 0, 0.034) 0px 5px 15px;
     z-index: 5;
+    backdrop-filter: blur(5px);
     transition: all 0.1s;
-
     //   -webkit-backdrop-filter: blur(5px);
     // filter: blur(10px);
     @media screen and (max-width:900px) {
