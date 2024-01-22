@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
     // background: #000;
+    @media screen and (max-width:790px) {
+        height: 200px;
+    }
     >h1 {
         font-size: 3rem;
         background-clip: text;

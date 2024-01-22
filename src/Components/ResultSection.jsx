@@ -9,8 +9,6 @@ import { memo } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player'
 import Lottie from '../Assets/i4oN6ZPh0l.json'
 
-const arr = new Array(5).fill('')
-
 const ResultSection = () => {
 
   const { darkMode, setDarkMode } = useContext(ThemeContext)
@@ -25,7 +23,7 @@ const ResultSection = () => {
         <SkeletonTheme baseColor={!darkMode ? "#eaeaf4" : "#202020"} highlightColor={!darkMode ? "white" : "#444"}>
           {
             loading ? (
-              arr.map((a, i) => (<ResultCards key={i} />))
+              new Array(10).fill('').map((a, i) => (<ResultCards key={i} />))
             ) : (
               data.length > 1 ? (
                 data.map((item, i) => (

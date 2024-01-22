@@ -1,7 +1,6 @@
 import { useState, createContext, useEffect } from 'react'
 import './Styles/Misc.scss'
 import Header from './Components/Header';
-// import Heart from './Components/Heart';
 import PreLoader from './Components/PreLoader';
 import HeroSection from './Components/HeroSection';
 import SearchingContainer from './Components/SearchingContainer';
@@ -72,7 +71,6 @@ function App() {
                 </showCatagoryContext.Provider>
                 <ResultSection />
               </searchContext.Provider>
-              {/* <Heart /> */}
               <Footer />
             </div>
           </ThemeContext.Provider>

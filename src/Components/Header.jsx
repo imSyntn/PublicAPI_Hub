@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useCallback } from 'react'
+import React, { useContext, useCallback } from 'react'
 import '../Styles/Header.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
@@ -6,12 +6,15 @@ import LogoAnimation from './LogoAnimation'
 import HeaderBtn from './HeaderBtn'
 import { HiSun } from "react-icons/hi";
 import { HiMoon } from "react-icons/hi2";
-// import { useCallback } from 'react'
-
+import { FaGithub } from "react-icons/fa"
 
 const Header = () => {
 
     const { darkMode, setDarkMode } = useContext(ThemeContext)
+
+    const redirectToGithub = useCallback(()=>{
+        window.open('https://github.com/imSyntn/PublicAPI_Hub', '_blank')
+    },[])
     
 const handleSunClick = useCallback(() => {
     setDarkMode(false)
@@ -34,7 +37,8 @@ const handleMoonClick = useCallback(() => {
                     <HiSun onClick={handleSunClick} className={!darkMode ? 'sunInDarkMode' : ''} />
                     <HiMoon onClick={handleMoonClick} className={darkMode ? 'moonInDarkMode' : ''} />
                 </div>
-                <HeaderBtn text={'Login'} borderAnimation={true} />
+                {/* <Player src={Heart} autoplay loop /> */}
+                <HeaderBtn Icon={FaGithub} text={'Add API'} borderAnimation={true} clickEvent={redirectToGithub} />
             </div>
         </header>
     )
