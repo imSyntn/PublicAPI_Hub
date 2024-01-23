@@ -62,11 +62,11 @@
 
 .btnBorderAnimation {
     position: relative;
-        width: 105px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    width: 105px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &::before {
         content: '';
@@ -80,6 +80,7 @@
         background-size: cover;
         transition: filter 0.2s;
     }
+
     &:hover::before {
         filter: blur(15px);
     }

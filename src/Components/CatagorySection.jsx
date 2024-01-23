@@ -13,17 +13,29 @@ const CatagorySection = () => {
   const { catagory } = useContext(showCatagoryContext)
   const { darkMode } = useContext(ThemeContext)
 
+  const [selectedIndex, setSelectedIndex] = useState(null)
+
+  useEffect(()=>{
+    if (searchIt.type === 'input') {
+      setSelectedIndex(null)
+    }
+  },[searchIt.type])
+
   return (
     <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}>
-      <h2>Catagories</h2>
+      <h2 className={!darkMode ? 'textInWhiteMode' : 'textInDarkMode'}>Catagories</h2>
       <div className="catagory-data">
         {
           catagoryNameData.map((item, i) => (
             <p key={i}
-              onClick={() => setSearchIt({
-                name: item.name,
-                type: 'catagory'
-              })}
+              className={selectedIndex === i ? 'glow' : ''}
+              onClick={() => {
+                setSearchIt({
+                  name: item.name,
+                  type: 'catagory'
+                })
+                setSelectedIndex(i)
+              }}
             >{item.name}</p>
           ))
         }

@@ -12,25 +12,29 @@ const Header = () => {
 
     const { darkMode, setDarkMode } = useContext(ThemeContext)
 
-    const redirectToGithub = useCallback(()=>{
+    const redirectToGithub = useCallback(() => {
         window.open('https://github.com/imSyntn/PublicAPI_Hub', '_blank')
-    },[])
-    
-const handleSunClick = useCallback(() => {
-    setDarkMode(false)
-    localStorage.setItem('darkMode', 'false')
-}, [])
+    }, [])
 
-const handleMoonClick = useCallback(() => {
-    setDarkMode(true)
-    localStorage.setItem('darkMode', 'true')
-}, [])
+    const reloadPage = useCallback(()=> {
+        location.reload()
+    }, [])
+
+    const handleSunClick = useCallback(() => {
+        setDarkMode(false)
+        localStorage.setItem('darkMode', 'false')
+    }, [])
+
+    const handleMoonClick = useCallback(() => {
+        setDarkMode(true)
+        localStorage.setItem('darkMode', 'true')
+    }, [])
 
     return (
         <header className={darkMode ? 'headerInDarkMode' : 'headerInLightMode'}>
-            <div className="logo">
+            <div className="logo" onClick={reloadPage} role='button'>
                 <LogoAnimation style={{ width: '40px' }} />
-                <p className={!darkMode ? '' : 'textInDarkMode'}>PublicAPI_Hub</p>
+                <p className={!darkMode ? 'textInWhiteMode' : 'textInDarkMode'}>PublicAPI_Hub</p>
             </div>
             <div className="btns">
                 <div className="themeSwitcher">

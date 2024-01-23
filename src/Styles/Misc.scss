@@ -24,6 +24,10 @@ $inlinePadding: 100px;
 .textInDarkMode {
     color: rgba(255, 255, 255, 0.849);
 }
+.textInWhiteMode {
+    color: black;
+    font-weight: 600;
+}
 .h1InDarkMode {
     background: url('https://i.gifer.com/3OhBA.gif');
 }
@@ -45,23 +49,28 @@ $inlinePadding: 100px;
     }
 }
 
-
-
-
-
-
-
 .catagoryInDark {
     border: 1px solid #25292f;
     box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+    .glow {
+        color: white;
+        // font-weight: bold;
+        font-family: "Victor Mono", monospace;
+        text-decoration: underline wavy #ffbf26;
+    }
 }
 .catagoryInLight {
     border: 1px solid transparent;
     box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+    .glow {
+        color: black;
+        font-weight: bold;
+        font-family: "Victor Mono", monospace;
+        text-decoration: underline wavy #ffbf26;
+    }
 }
 .cardInDark {
     background: #14181a;
-    // background: transparent;
     border: 1px solid #25292f;
     box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
