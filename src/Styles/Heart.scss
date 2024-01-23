@@ -4,15 +4,10 @@
     position: fixed;
     top: 90dvh;
     right: 50px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     border-radius: 50%;
     backdrop-filter: blur(3px);
     z-index: 7;
-    // position: relative;
     cursor: pointer;
-    // border: 1px solid red;
     overflow: hidden;
 
     .hrt, .crcl {
@@ -20,24 +15,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // border: 1px solid rgb(238, 255, 0);
     }
     .crcl {
         left: 28px;
     }
-    // >svg {
-    //     font-size: 25px;
-    //     // fill: #fa2a55;
-    //     fill: red;
-    //     animation: reverseRotate 5s infinite linear;
-    // }
-
-    // &:hover {
-    //     animation: none;
-
-    //     >svg {
-    //         animation: shake 0.2s linear;
-    //         animation-iteration-count: 3;        
-    //     }
-    // }
 }

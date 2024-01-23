@@ -4,7 +4,6 @@ import '../Styles/Misc.scss'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { ThemeContext } from '../App'
-// import img from '../Assets/public-removebg-preview.png'
 import { MdOutlineVpnKey } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
@@ -13,7 +12,7 @@ import { GrLinkNext } from "react-icons/gr";
 
 const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
 
-  const { darkMode, setDarkMode } = useContext(ThemeContext)
+  const { darkMode } = useContext(ThemeContext)
 
   return (
     <div className={`ResultCards ${!darkMode ? 'cardInLight' : 'cardInDark'}`}>

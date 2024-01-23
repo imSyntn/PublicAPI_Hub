@@ -1,24 +1,18 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import '../Styles/SearchingContainer.scss'
 import Button from './Button'
-// import { SearchContext } from '../App'
 import { ImSearch } from "react-icons/im";
 import { useCallback } from 'react';
 import { memo } from 'react';
 import HeaderBtn from './HeaderBtn';
 import { searchContext } from '../App';
-// import CatagorySection from './CatagorySection';
 import { showCatagoryContext } from '../App';
 
 const SearchingContainer = () => {
 
-    const { catagory, setCatagory } = useContext(showCatagoryContext)
-    const { searchIt, setSearchIt } = useContext(searchContext)
+    const { setCatagory } = useContext(showCatagoryContext)
+    const { setSearchIt } = useContext(searchContext)
     const [nameSearch, setNameSearch] = useState('')
-
-    // useEffect(()=>{
-    //     console.log(catagory)
-    // },[catagory])
 
     const catagoryBtnClick = useCallback(() => {
         setCatagory(prev => !prev)

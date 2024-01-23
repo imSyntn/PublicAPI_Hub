@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import '../Styles/ResultSection.scss'
 import { ThemeContext } from '../App'
 import { searchContext } from '../App';
@@ -11,8 +11,8 @@ import Lottie from '../Assets/i4oN6ZPh0l.json'
 
 const ResultSection = () => {
 
-  const { darkMode, setDarkMode } = useContext(ThemeContext)
-  const { searchIt, setSearchIt } = useContext(searchContext)
+  const { darkMode } = useContext(ThemeContext)
+  const { searchIt } = useContext(searchContext)
 
   const { data, loading } = useFetch(searchIt);
 

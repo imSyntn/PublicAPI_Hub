@@ -5,7 +5,7 @@ import { ThemeContext } from '../App'
 
 const Button = ({ Icon, text, clickEvent, borderAnimation }) => {
 
-  const { darkMode, setDarkMode } = useContext(ThemeContext)
+  const { darkMode } = useContext(ThemeContext)
 
   return (
     <div className={borderAnimation && 'btnBorderAnimation'}>

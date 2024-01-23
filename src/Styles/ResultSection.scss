@@ -1,24 +1,14 @@
 @import './Misc.scss';
 .ResultSection {
-    // border: 1px solid blue;
-    // height: calc(100% - 200px);
     position: relative;
     padding-inline:  $inlinePadding;
     padding-bottom: 25px;
     z-index: 3;
     backdrop-filter: blur(8px);
-    // background: white;
-    // @media screen and (max-width:800px) {
-    //     padding-inline: 0px
-    // }
 
     >h1 {
         margin-block: 10px;
         font-size: 2.5rem;
-        // position: sticky;
-        // top: 50px;
-        // border: 1px solid yellow;
-        // backdrop-filter: blur(5px);
         @media screen and (max-width:900px) {
             padding-left: 20px;
             
@@ -26,17 +16,10 @@
     }
 
     >.results {
-        // display: flex;
-        // flex-wrap: wrap;
         justify-content: space-evenly;
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto-fit, min(340px));
-
-        // >.noRes {
-        //     background: lightgreen;
-        //     width: 100%;
-        // }
     }
     @media screen and (max-width:900px) {
         padding-inline: 0px;

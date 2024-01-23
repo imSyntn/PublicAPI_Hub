@@ -13,10 +13,6 @@ header {
     z-index: 5;
     backdrop-filter: blur(5px);
     transition: all 0.1s;
-    // border: 1px solid red;
-
-    //   -webkit-backdrop-filter: blur(5px);
-    // filter: blur(10px);
     @media screen and (max-width:900px) {
         padding-inline: 20px;
     }
@@ -35,7 +31,6 @@ header {
         align-items: center;
 
         >.themeSwitcher {
-            // border: 1px solid blue;
             position: relative;
             height: 40px;
             width: 40px;
@@ -55,7 +50,6 @@ header {
 
                 &:nth-child(2) {
                     fill: black;
-                    // display: none;
                 }
             }
         }

@@ -10,8 +10,8 @@ const CatagorySection = () => {
 
   const { searchIt, setSearchIt } = useContext(searchContext)
   const { catagoryNameData } = useFetch(searchIt)
-  const { catagory, setCatagory } = useContext(showCatagoryContext)
-  const { darkMode, setDarkMode } = useContext(ThemeContext)
+  const { catagory } = useContext(showCatagoryContext)
+  const { darkMode } = useContext(ThemeContext)
 
   return (
     <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}>

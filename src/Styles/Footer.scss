@@ -6,7 +6,6 @@ footer {
     color: black;
     height: 200px;
     width: 100%;
-    // background: #f0f6fc;
     border-top: 1px solid #1b1e23;
     display: flex;
     flex-wrap: wrap;
@@ -16,9 +15,6 @@ footer {
     @media screen and (max-width:900px) {
         padding-inline: 20px;
     }
-    @media screen and (max-width:550px) {
-        // fl
-    }
 
     >.logoImg {
         display: flex;
@@ -26,18 +22,13 @@ footer {
         >h1 {
         font-family: 'Victor Mono', monospace;
         }
-        // img {
-        //     width: 100px;
-        // }
     }
 
     >.icons {
-        // width: 100%;
         svg {
             font-size: 35px;
             margin: 10px;
                 fill: gray;
-            // transition: fill 0.3s;
         }
     }
 }

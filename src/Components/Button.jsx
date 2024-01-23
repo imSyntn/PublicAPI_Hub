@@ -7,8 +7,8 @@ import { RxCross1 } from "react-icons/rx";
 
 const Button = ({ Icon, text, clickEvent, animation }) => {
 
-  const { darkMode, setDarkMode } = useContext(ThemeContext)
-  const { catagory, setCatagory } = useContext(showCatagoryContext)
+  const { darkMode } = useContext(ThemeContext)
+  const { catagory } = useContext(showCatagoryContext)
 
   return (
     <div className={animation && 'btnBorderAnimation'}>

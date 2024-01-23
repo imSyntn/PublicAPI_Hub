@@ -1,4 +1,4 @@
-import React, { useContext, useCallback } from 'react'
+import React, { useContext, useCallback, memo } from 'react'
 import '../Styles/Header.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
@@ -18,12 +18,12 @@ const Header = () => {
     
 const handleSunClick = useCallback(() => {
     setDarkMode(false)
-    // localStorage.setItem('lightMode', 'true')
+    localStorage.setItem('darkMode', 'false')
 }, [])
 
 const handleMoonClick = useCallback(() => {
     setDarkMode(true)
-    // localStorage.setItem('lightMode', 'false')
+    localStorage.setItem('darkMode', 'true')
 }, [])
 
     return (
@@ -37,11 +37,10 @@ const handleMoonClick = useCallback(() => {
                     <HiSun onClick={handleSunClick} className={!darkMode ? 'sunInDarkMode' : ''} />
                     <HiMoon onClick={handleMoonClick} className={darkMode ? 'moonInDarkMode' : ''} />
                 </div>
-                {/* <Player src={Heart} autoplay loop /> */}
                 <HeaderBtn Icon={FaGithub} text={'Add API'} borderAnimation={true} clickEvent={redirectToGithub} />
             </div>
         </header>
     )
 }
 
-export default Header
+export default memo(Header)

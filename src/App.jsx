@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from 'react'
+import { useState, createContext, useEffect, useLayoutEffect } from 'react'
 import './Styles/Misc.scss'
 import Header from './Components/Header';
 import PreLoader from './Components/PreLoader';
@@ -23,46 +23,34 @@ function App() {
   })
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onload = () => {
       setTimeout(() => setLoading(false), 1000)
     }
     window.addEventListener('load', onload)
-
-    return () => {
-      window.removeEventListener('load', onload)
-    }
   }, [])
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('lightMode') === null) {
-  //     localStorage.setItem('lightMode', 'false')
-  //   } else {
-  //     if (localStorage.getItem('lightMode') === 'true') {
-  //       setdarkMode({
-  //         lightMode: true,
-  //         darkMode: false,
-  //       })
-  //     } else {
-  //       setdarkMode({
-  //         lightMode: false,
-  //         darkMode: true,
-  //       })
-  //     }
-  //   }
-  // }, [])
+  useLayoutEffect(() => {
+    if (localStorage.getItem('darkMode') === null) {
+      localStorage.setItem('darkMode', 'true')
+    } else {
+      if (localStorage.getItem('darkMode') === 'false') {
+        setDarkMode(false)
+      }
+    }
+  }, [])
 
   return (
     <>
       {
-        loading ? (<PreLoader theme={darkMode.lightMode} />) : (
+        loading ? (<PreLoader theme={darkMode} />) : (
           <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
             <div className={`main ${darkMode ? 'darkContainer' : 'lightContainer'}`}>
               <Header />
-              <searchContext.Provider value={{searchIt, setSearchIt}}>
+              <searchContext.Provider value={{ searchIt, setSearchIt }}>
                 <showCatagoryContext.Provider value={{ catagory, setCatagory }}>
                   <div className="hero-search">
-                    <HeroSection />
+                    <HeroSection theme={darkMode} />
                     <SearchingContainer />
                   </div>
                   <div className="overlay">
@@ -76,7 +64,6 @@ function App() {
           </ThemeContext.Provider>
         )
       }
-
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { memo } from 'react'
 import '../Styles/Footer.scss'
 import { FaGithub } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -19,4 +19,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default memo(Footer)
