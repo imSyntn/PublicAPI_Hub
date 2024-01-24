@@ -4,7 +4,7 @@ import { ThemeContext } from '../App'
 import { showCatagoryContext } from '../App'
 import { searchContext } from '../App';
 import useFetch from '../Hook/useFetch'
-
+import SmoothScroll from '../Utils/SmoothScroll'
 
 const CatagorySection = () => {
 
@@ -22,7 +22,7 @@ const CatagorySection = () => {
   },[searchIt.type])
 
   return (
-    <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}>
+    <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}  data-lenis-prevent>
       <h2 className={!darkMode ? 'textInWhiteMode' : 'textInDarkMode'}>Catagories</h2>
       <div className="catagory-data">
         {

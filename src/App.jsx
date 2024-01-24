@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect, useLayoutEffect } from 'react'
+import { useState, createContext, useLayoutEffect, useRef } from 'react'
 import './Styles/Misc.scss'
 import Header from './Components/Header';
 import PreLoader from './Components/PreLoader';
@@ -22,7 +22,6 @@ function App() {
     type: ''
   })
 
-
   useLayoutEffect(() => {
     const onload = () => {
       setTimeout(() => setLoading(false), 1000)
@@ -39,6 +38,11 @@ function App() {
       }
     }
   }, [])
+
+  const ref = useRef(null)
+  const options = {
+    smooth: true,
+  }
 
   return (
     <>

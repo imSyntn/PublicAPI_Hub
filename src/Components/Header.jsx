@@ -13,7 +13,7 @@ const Header = () => {
     const { darkMode, setDarkMode } = useContext(ThemeContext)
 
     const redirectToGithub = useCallback(() => {
-        window.open('https://github.com/imSyntn/PublicAPI_Hub', '_blank')
+        window.open('https://github.com/imSyntn/publicAPIs-API', '_blank')
     }, [])
 
     const reloadPage = useCallback(()=> {
