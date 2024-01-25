@@ -6,7 +6,7 @@ const useFetch = (searchIt) => {
     const [catagoryNameData, setCatagoryNameData] = useState([])
 
     const randomSearch = useCallback(() => {
-        fetch('https://publicapi-hub.vercel.app/random', {
+        fetch('https://publicapi-hub-api.vercel.app/random', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ const useFetch = (searchIt) => {
     }, [])
 
     const catagoryNamesSearch = useCallback(() => {
-        fetch('https://publicapi-hub.vercel.app/catagories', {
+        fetch('https://publicapi-hub-api.vercel.app/catagories', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const useFetch = (searchIt) => {
     const nameSearch = useCallback(() => {
         setLoading(true)
         setData([])
-        fetch(`https://publicapi-hub.vercel.app/search/${searchIt.name}`, {
+        fetch(`https://publicapi-hub-api.vercel.app/search/${searchIt.name}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const useFetch = (searchIt) => {
     const catagorySearch = useCallback(() => {
         setData([])
         setLoading(true)
-        fetch(`https://publicapi-hub.vercel.app/catagories/${searchIt.name}`, {
+        fetch(`https://publicapi-hub-api.vercel.app/catagories/${searchIt.name}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
