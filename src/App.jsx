@@ -1,4 +1,4 @@
-import { useState, createContext, useLayoutEffect, useRef } from 'react'
+import { useState, createContext, useLayoutEffect, useRef, useEffect } from 'react'
 import './Styles/Misc.scss'
 import Header from './Components/Header';
 import PreLoader from './Components/PreLoader';
@@ -38,11 +38,6 @@ function App() {
       }
     }
   }, [])
-
-  const ref = useRef(null)
-  const options = {
-    smooth: true,
-  }
 
   return (
     <>

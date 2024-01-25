@@ -22,12 +22,12 @@
     flex-direction: column;
     overflow-y: hidden;
     z-index: 9;
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     >h2 {
         padding-block: 15px;
         font-family: "Victor Mono", monospace;
-        backdrop-filter: blur(100px);
+        // backdrop-filter: blur(10px);
     }
 
     >.catagory-data {
