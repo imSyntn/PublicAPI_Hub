@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/PreLoader.scss'
+import '../Styles/PreLoaderUpdated.scss'
 import '../Styles/Misc.scss'
 import { Player } from '@lottiefiles/react-lottie-player'
 import Logo from '../Assets/logo.json'
