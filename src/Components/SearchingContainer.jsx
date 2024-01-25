@@ -18,6 +18,10 @@ const SearchingContainer = () => {
         setCatagory(prev => !prev)
     }, [])
 
+    const keyDownEvent = useCallback((e)=> {
+        if(e.keyCode===13) searchBtnClick()
+    },[nameSearch])
+
     const searchBtnClick = useCallback(() => {
         nameSearch.length > 1 && setSearchIt({
             name: nameSearch,
@@ -28,7 +32,7 @@ const SearchingContainer = () => {
     return (
         <div className="searchingContainer">
             <div className="srch">
-                <input type="text" placeholder='Search ...' onChange={(e) => setNameSearch(e.target.value)} value={nameSearch} />
+                <input type="text" placeholder='Search ...' onChange={(e) => setNameSearch(e.target.value)} value={nameSearch} onKeyDown={keyDownEvent} />
                 <HeaderBtn Icon={ImSearch} clickEvent={searchBtnClick} />
             </div>
             <Button text={'Catagories'} clickEvent={catagoryBtnClick} />

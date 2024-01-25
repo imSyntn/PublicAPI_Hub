@@ -4,7 +4,7 @@ footer {
     margin-top: 50px;
     padding-inline: $inlinePadding;
     color: black;
-    height: 200px;
+    height: 180px;
     width: 100%;
     border-top: 1px solid #1b1e23;
     display: flex;
@@ -19,16 +19,33 @@ footer {
     >.logoImg {
         display: flex;
         align-items: center;
+
         >h1 {
-        font-family: 'Victor Mono', monospace;
+            font-family: 'Victor Mono', monospace;
         }
     }
 
     >.icons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media screen and (max-width:524px) {
+            width: 100%;
+        }
+
         svg {
             font-size: 35px;
             margin: 10px;
-                fill: gray;
+            fill: gray;
+        }
+
+        p {
+            text-align: right;
+
+            >a {
+                text-decoration: none;
+            }
         }
     }
 }

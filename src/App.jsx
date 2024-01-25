@@ -63,7 +63,7 @@ function App() {
                 </showCatagoryContext.Provider>
                 <ResultSection />
               </searchContext.Provider>
-              <Footer />
+              <Footer theme={darkMode} />
             </div>
           </ThemeContext.Provider>
         )
