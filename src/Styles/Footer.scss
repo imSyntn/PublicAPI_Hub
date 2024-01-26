@@ -38,6 +38,24 @@ footer {
             font-size: 35px;
             margin: 10px;
             fill: gray;
+            &:hover {
+                fill: salmon;
+            }
+        }
+        .heart {
+            &:hover {
+                fill: salmon;
+            }
+        }
+        .black {
+            &:hover {
+                fill: rgb(0, 0, 0);
+            }
+        }
+        .white {
+            &:hover {
+                fill: rgb(255, 255, 255);
+            }
         }
 
         p {

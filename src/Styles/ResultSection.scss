@@ -34,22 +34,23 @@
             bottom: -60px;
             left: 50%;
             transform: translateX(-50%);
-            // border: 1px solid red;
             display: flex;
             >.box {
-                height: 40px;
-                width: 40px;
+                height: 12px;
+                width: 12px;
+                background: gray;
+                border: none;
+                border-radius: 50%;
                 margin-inline: 5px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 cursor: pointer;
-                color: gray;
+                transition: all 0.3s;
             }
             .glow {
-                // box-shadow: rgb(255, 197, 197) 0px 25px 50px -12px;
-                border-bottom: 2px solid gray;
-                font-weight: 500;
+                background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        background-size: cover;
+                width: 35px;
+                height: 12px;
+                border-radius: 10px;
             }
         }
     }

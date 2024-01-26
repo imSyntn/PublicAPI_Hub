@@ -1,8 +1,77 @@
-# React + Vite
+# PublicAPI_Hub [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to PublicAPI_Hub, your go-to platform for discovering and integrating public APIs. Explore a diverse collection of categorized APIs, designed to empower developers, data enthusiasts, and entrepreneurs.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Comprehensive Categorization:** Easily find APIs tailored to your needs with our extensive category system.
+  
+- **Intuitive Search:** Effortlessly search and discover APIs based on keywords, functionalities, or attributes.
+
+- **Detailed Information:** Access in-depth details for each API, authentication methods, CORS, and Link.
+
+## Getting Started
+
+Follow these instructions to set up the project locally on your machine.
+
+### Prerequisites
+
+- Node.js (at least version 12)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/PublicAPI_Hub.git
+```
+
+2. Change into the project directory:
+
+```bash
+cd comic-info
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+### Usage
+
+1. Run the development server:
+
+```bash
+npm run dev
+```
+
+2. Open your browser and go to http://localhost:5173 to access the application.
+
+## Dependencies
+
+* React
+* Sass
+* @lottiefiles/react-lottie-player
+* @studio-freight/react-lenis
+* react-icons
+* react-loading-skeleton
+
+## Contributing
+
+Contributions are welcome! If you find any issues or want to add new features, feel free to open an issue or submit a pull request.
+
+Please make sure to follow the [Code of Conduct](CODE_OF_CONDUCT.md) while contributing.
+
+## Connect with Us
+
+- Website: [PublicAPIHub.com](publicapi-hub.vercel.app/)
+- Contact: [imsyntn@gmail.com](mailto:imsyntn@gmail.com)
+- Follow us on [Twitter](https://twitter.com/imSyntn) for the latest updates.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+Happy coding!

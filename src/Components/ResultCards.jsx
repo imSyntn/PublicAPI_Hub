@@ -10,7 +10,7 @@ import { FaLockOpen } from "react-icons/fa";
 import { TbShare } from "react-icons/tb";
 import { GrLinkNext } from "react-icons/gr";
 
-const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
+const ResultCards = memo(({ name, auth, Cors, desc, https, link }) => {
 
   const { darkMode } = useContext(ThemeContext)
 
@@ -89,6 +89,6 @@ const ResultCards = ({ name, auth, Cors, desc, https, link }) => {
       </div>
     </div>
   )
-}
+})
 
-export default memo(ResultCards)
+export default ResultCards

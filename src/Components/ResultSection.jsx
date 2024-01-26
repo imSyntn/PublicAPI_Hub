@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { lazy, Suspense, useContext, useEffect, useState } from 'react'
 import '../Styles/ResultSection.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
@@ -6,9 +6,7 @@ import { searchContext } from '../App';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import useFetch from '../Hook/useFetch';
 import ResultCards from './ResultCards'
-import { memo } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player'
-import Lottie from '../Assets/i4oN6ZPh0l.json'
+const NotFound = lazy(()=> import('./NotFound'))
 
 const ResultSection = () => {
 
@@ -46,7 +44,7 @@ const ResultSection = () => {
                   <ResultCards key={i} name={item.API} auth={item.Auth} Cors={item.Cors} desc={item.Description} https={item.HTTPS} link={item.Link} />
                 ))
               ) : (
-                <Player src={Lottie} loop autoplay />
+                <Suspense><NotFound /></Suspense>
               )
             )
           }
@@ -54,7 +52,7 @@ const ResultSection = () => {
         <div className="paginationDiv">
           {
             pageIndex.map((i)=> (
-              <div className={`box ${currentPage === i && 'glow'}`} key={i} onClick={()=> setCurrentPage(i)}>{i}</div>
+              <div className={`box ${currentPage === i && 'glow'}`} key={i} onClick={()=> setCurrentPage(i)}></div>
             ))
           }
         </div>
@@ -63,4 +61,4 @@ const ResultSection = () => {
   )
 }
 
-export default memo(ResultSection)
+export default ResultSection

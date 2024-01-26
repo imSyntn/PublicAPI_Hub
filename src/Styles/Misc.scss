@@ -29,10 +29,13 @@ $inlinePadding: 100px;
     font-weight: 600;
 }
 .h1InDarkMode {
-    background: url('https://i.gifer.com/3OhBA.gif');
+    // background: url('https://i.gifer.com/3OhBA.gif');
+    background-image: linear-gradient(to right, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
 }
 .h1InLightMode {
-    background: url('https://i.gifer.com/8VvO.gif');
+    // background: url('https://i.gifer.com/8VvO.gif');
+    background-image: linear-gradient(to right, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
+    // background-image: linear-gradient(to right, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
 }
 .hero-search {
     position: fixed;

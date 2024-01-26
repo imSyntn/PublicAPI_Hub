@@ -3,7 +3,7 @@ import '../Styles/Button.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
 
-const Button = ({ Icon, text, clickEvent, borderAnimation }) => {
+const Button = memo(({ Icon, text, clickEvent, borderAnimation }) => {
 
   const { darkMode } = useContext(ThemeContext)
 
@@ -15,6 +15,6 @@ const Button = ({ Icon, text, clickEvent, borderAnimation }) => {
       </button>
     </div>
   )
-}
+})
 
-export default memo(Button)
+export default Button

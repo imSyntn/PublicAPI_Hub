@@ -2,7 +2,6 @@ import React, { useContext, useCallback, memo } from 'react'
 import '../Styles/Header.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
-import LogoAnimation from './LogoAnimation'
 import HeaderBtn from './HeaderBtn'
 import { HiSun } from "react-icons/hi";
 import { HiMoon } from "react-icons/hi2";
@@ -33,7 +32,6 @@ const Header = () => {
     return (
         <header className={darkMode ? 'headerInDarkMode' : 'headerInLightMode'}>
             <div className="logo" onClick={reloadPage} role='button'>
-                <LogoAnimation style={{ width: '40px' }} />
                 <p className={!darkMode ? 'textInWhiteMode' : 'textInDarkMode'}>PublicAPI_Hub</p>
             </div>
             <div className="btns">
@@ -47,4 +45,4 @@ const Header = () => {
     )
 }
 
-export default memo(Header)
+export default Header

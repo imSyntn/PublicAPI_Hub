@@ -1,10 +1,9 @@
-import React, { memo, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../Styles/CatagorySection.scss'
 import { ThemeContext } from '../App'
 import { showCatagoryContext } from '../App'
 import { searchContext } from '../App';
 import useFetch from '../Hook/useFetch'
-import SmoothScroll from '../Utils/SmoothScroll'
 
 const CatagorySection = () => {
 
@@ -44,4 +43,4 @@ const CatagorySection = () => {
   )
 }
 
-export default memo(CatagorySection)
+export default CatagorySection

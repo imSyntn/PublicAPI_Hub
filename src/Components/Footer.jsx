@@ -1,20 +1,20 @@
-import React, { memo } from 'react'
+import React from 'react'
 import '../Styles/Footer.scss'
-import { FaGithub } from "react-icons/fa6";
+import { SiGithub } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import LogoAnimation from './LogoAnimation'
+import { FaRegHeart } from "react-icons/fa";
 
 const Footer = ({theme}) => {
   return (
     <footer>
       <div className="logoImg">
-        <LogoAnimation style={{ width: '80px' }} />
         <h1>PublicAPI_Hub</h1>
       </div>
       <div className="icons">
         <div className="links">
-          <a href="https://github.com/imSyntn/PublicAPI_Hub" target='_blank'><FaGithub style={{ fill: 'gray' }} /></a>
-          <a href="https://twitter.com/" target='_blank'><FaXTwitter /></a>
+          <a href="https://github.com/imSyntn/PublicAPI_Hub" target='_blank'><SiGithub className={theme ?'white' :'black'} /></a>
+          <a href="https://twitter.com/" target='_blank'><FaXTwitter className={theme ?'white' :'black'} /></a>
+          <a href="" target='_blank'><FaRegHeart className='heart' /></a>
         </div>
         <p>Website by <a target='_blank' style={theme ? {color: 'white'} : {color: 'black',fontWeight: 500}} href="https://twitter.com/imSyntn">@imSyntn</a></p>
       </div>
@@ -22,4 +22,4 @@ const Footer = ({theme}) => {
   )
 }
 
-export default memo(Footer)
+export default Footer
