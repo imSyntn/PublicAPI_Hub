@@ -8,8 +8,8 @@ const Button = memo(({ Icon, text, clickEvent, borderAnimation }) => {
   const { darkMode } = useContext(ThemeContext)
 
   return (
-    <div className={borderAnimation && 'btnBorderAnimation'}>
-      <button className={`Button ${!darkMode && 'LightBtn'}`} onClick={clickEvent}>
+    <div className={borderAnimation ? 'btnBorderAnimation' : ''} role='button'>
+      <button className={`Button ${!darkMode ? 'LightBtn': ''}`} onClick={clickEvent}>
         {Icon && <Icon style={borderAnimation?  darkMode ? {fill: 'white'} : {fill: 'black'} : {fill: 'gray'}} />}
         {text && <p style={darkMode ? {color: 'white'} : {color: 'black'}}>{text}</p>}
       </button>

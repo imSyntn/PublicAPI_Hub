@@ -32,15 +32,21 @@
 
     >.catagory-data {
         overflow-y: auto;
+
         &::-webkit-scrollbar {
             display: none;
         }
     }
+
     p {
         margin: 15px;
         cursor: pointer;
+        color: rgb(158, 158, 158);
+        transition: transform 0.2s;
+
         &:hover {
-            color: rgb(197, 197, 197)
+            transform: scale(1.1);
+            color: aliceblue;
         }
     }
 }
