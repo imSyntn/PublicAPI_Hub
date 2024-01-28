@@ -23,10 +23,9 @@ function App() {
   })
 
   useEffect(() => {
-    const onload = () => {
+    window.addEventListener('load', () => {
       setTimeout(() => setLoading(false), 1000)
-    }
-    window.addEventListener('load', onload)
+    })
   }, [])
 
   useLayoutEffect(() => {
