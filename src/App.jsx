@@ -23,9 +23,7 @@ function App() {
   })
 
   useEffect(() => {
-    window.addEventListener('load', () => {
       setTimeout(() => setLoading(false), 1000)
-    })
   }, [])
 
   useLayoutEffect(() => {
