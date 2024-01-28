@@ -22,7 +22,7 @@ function App() {
     type: ''
   })
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const onload = () => {
       setTimeout(() => setLoading(false), 1000)
     }
