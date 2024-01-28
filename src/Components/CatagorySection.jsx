@@ -27,7 +27,7 @@ const CatagorySection = () => {
         {
           catagoryNameData.map((item, i) => (
             <p key={i}
-              className={selectedIndex === i && 'glow'}
+              className={selectedIndex === i ? 'glow' : ''}
               onClick={() => {
                 setSearchIt({
                   name: item.name,
