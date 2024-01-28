@@ -14,7 +14,7 @@ const Footer = ({theme}) => {
         <div className="links">
           <a href="https://github.com/imSyntn/PublicAPI_Hub" target='_blank'><SiGithub className={theme ?'white' :'black'} /></a>
           <a href="https://twitter.com/" target='_blank'><FaXTwitter className={theme ?'white' :'black'} /></a>
-          <a href="" target='_blank'><FaRegHeart className='heart' /></a>
+          <a href="https://github.com/sponsors/imSyntn" target='_blank'><FaRegHeart className='heart' /></a>
         </div>
         <p>Website by <a target='_blank' style={theme ? {color: 'white'} : {color: 'black',fontWeight: 500}} href="https://twitter.com/imSyntn">@imSyntn</a></p>
       </div>

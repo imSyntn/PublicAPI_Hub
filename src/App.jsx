@@ -41,8 +41,10 @@ function App() {
 
   return (
     <>
-      {
-        loading ? (<PreLoader theme={darkMode} />) : (
+      {/* { */}
+        {/* loading ? (<PreLoader theme={darkMode} />) : */}
+        
+        {/* ( */}
           <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
             <div className={`main ${darkMode ? 'darkContainer' : 'lightContainer'}`}>
               <Header />
@@ -61,8 +63,8 @@ function App() {
               <Footer theme={darkMode} />
             </div>
           </ThemeContext.Provider>
-        )
-      }
+        {/* // ) */}
+      {/* // } */}
     </>
   )
 }
