@@ -8,6 +8,12 @@
     "start_url": "/",
     "icons": [
       {
+        "src": "src/Assets/favicon_io/android-chrome-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
         "src": "src/Assets/favicon_io/maskable_icon.png",
         "sizes": "196x196",
         "type": "image/png",
