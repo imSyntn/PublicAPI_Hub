@@ -4,58 +4,104 @@
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
+
     >.logoImg {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-bottom: 10px;
+
         >img {
             width: 40px;
             margin-right: 10px;
         }
+
         >h2 {
             font-size: 1.3rem;
         }
     }
+
     >.options {
         margin-top: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+
         >.cardSvgDiv {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+
             span {
                 font-size: 15px;
                 margin-left: 5px;
             }
+
             .security {
                 svg {
                     font-size: 13px;
                 }
+
                 span {
                     font-size: 14px;
                     margin-left: 1px;
                 }
             }
         }
+
         >a {
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
+
             svg {
+                -webkit-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
                 transform: rotate(-30deg);
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
                 transition: all 0.3s;
             }
+
             &:hover {
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
                 transform: scale(1.1);
+
                 svg {
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
                     transform: rotate(0deg);
                 }
             }
         }
     }
+
     @media screen and (max-width:790px) {
         margin: 0;
     }

@@ -4,13 +4,23 @@ header {
     height: 60px;
     width: 100%;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-inline: $inlinePadding;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.034) 0px 5px 15px;
     box-shadow: rgba(0, 0, 0, 0.034) 0px 5px 15px;
     z-index: 5;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
     transition: all 0.1s;
 
     @media screen and (max-width:900px) {
@@ -18,7 +28,11 @@ header {
     }
 
     >.logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         cursor: pointer;
 
@@ -28,7 +42,11 @@ header {
     }
 
     >.btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         >.themeSwitcher {
@@ -46,6 +64,8 @@ header {
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
                 cursor: pointer;
 
@@ -67,8 +87,14 @@ header {
 
             button {
                 border: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 border-radius: 10px;
 

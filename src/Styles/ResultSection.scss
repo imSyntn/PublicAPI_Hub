@@ -1,21 +1,24 @@
 @import './Misc.scss';
+
 .ResultSection {
     position: relative;
-    padding-inline:  $inlinePadding;
+    padding-inline: $inlinePadding;
     padding-bottom: 25px;
     z-index: 3;
     margin-top: 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
-    // backdrop-filter: blur(8px);
 
     >h1 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: 2.5rem;
-        // font-family: "Victor Mono", monospace;
         font-weight: 400;
+
         @media screen and (max-width:900px) {
             padding-left: 20px;
         }
+
         @media screen and (max-width:700px) {
             font-size: 2.2rem;
         }
@@ -23,18 +26,29 @@
 
     >.results {
         position: relative;
-        // border: 1px solid rgb(30, 255, 0);
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
+        display: -ms-grid;
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto-fit, min(340px));
+
+        @media screen and (max-width:720px) {
+            row-gap: 30px;
+        }
 
         >.paginationDiv {
             position: absolute;
             bottom: -60px;
             left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+
             >.box {
                 height: 12px;
                 width: 12px;
@@ -43,23 +57,27 @@
                 border-radius: 50%;
                 margin-inline: 5px;
                 cursor: pointer;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
                 transition: all 0.3s;
             }
+
             .glow {
-                background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-        background-size: cover;
+                background: #cbe6ef;
                 width: 35px;
                 height: 12px;
                 border-radius: 10px;
             }
         }
     }
+
     @media screen and (max-width:900px) {
         padding-inline: 0px;
-        
+
     }
+
     @media screen and (max-width:760px) {
         padding-inline: 10px;
-        
+
     }
 }

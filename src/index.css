@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: gray;
   font-family: 'Roboto', sans-serif;
 }
@@ -12,18 +13,18 @@ body {
   min-height: 100dvh;
   width: 100%;
   position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 section {
   padding-top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-/* ::-webkit-scrollbar {
-  display: none;
-} */
 ::-webkit-scrollbar {
   width: 1px;
-  /* display: none; */
 }
  
 ::-webkit-scrollbar-track {

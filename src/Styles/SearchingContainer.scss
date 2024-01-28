@@ -1,13 +1,22 @@
 .searchingContainer {
     min-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     >.srch {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-right: 20px;
+        -webkit-box-shadow: 0 0 0 #e595ff, 0 0 48px rgba(130, 26, 250, 0.5);
         box-shadow: 0 0 0 #e595ff, 0 0 48px rgba(130, 26, 250, 0.5);
         border-radius: 10px;
 
@@ -28,11 +37,15 @@
 
         .Button {
             width: 41px;
+            height: 40px;
             border: 2px solid #473939;
             border-left: none;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             background-color: transparent;
+            -webkit-transition: none;
+            -o-transition: none;
+            transition: none;
 
             >svg {
                 font-size: 20px;
@@ -64,17 +77,30 @@
     }
 
     @media screen and (max-width: 1085px) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+
         >div>button {
             margin-top: 7px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
     }
+
     @media screen and (max-width:525px) {
         .slideLeft {
+            -webkit-transform: translateX(calc(-50vw + 80px));
+            -ms-transform: translateX(calc(-50vw + 80px));
             transform: translateX(calc(-50vw + 80px));
             margin-top: 7px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
     }

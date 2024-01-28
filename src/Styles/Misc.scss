@@ -4,10 +4,12 @@ $inlinePadding: 100px;
     background: white;
 }
 .headerInDarkMode {
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
 }
 .headerInLightMode {
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
 }
 .sunInDarkMode {
     display: none;
@@ -29,13 +31,14 @@ $inlinePadding: 100px;
     font-weight: 600;
 }
 .h1InDarkMode {
-    // background: url('https://i.gifer.com/3OhBA.gif');
-    background-image: linear-gradient(to right, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
+    background-image: -webkit-gradient(linear, left top, right top, from(#7f00ff), color-stop(#9b62ff), color-stop(#b99aff), color-stop(#dacdff), to(#ffffff));
+background-image: -o-linear-gradient(left, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
+background-image: linear-gradient(to right, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
 }
 .h1InLightMode {
-    // background: url('https://i.gifer.com/8VvO.gif');
-    background-image: linear-gradient(to right, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
-    // background-image: linear-gradient(to right, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+    background-image: -webkit-gradient(linear, left top, right top, from(#7f00ff), color-stop(#8900a1), color-stop(#6b0058), color-stop(#3c0225), to(#000000));
+background-image: -o-linear-gradient(left, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
+background-image: linear-gradient(to right, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
 }
 .hero-search {
     position: fixed;
@@ -47,40 +50,45 @@ $inlinePadding: 100px;
     position: relative;
     pointer-events: none;
     z-index: 3;
-    @media screen and (max-width:790px) {
+    @media screen and (max-width:1085px) {
         height: 280px;
     }
 }
 
 .catagoryInDark {
     border: 1px solid #25292f;
-    box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+            box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
     .glow {
         color: white;
-        // font-weight: bold;
         font-family: "Victor Mono", monospace;
-        text-decoration: underline wavy #ffbf26;
+        -webkit-text-decoration: underline wavy #ffbf26;
+                text-decoration: underline wavy #ffbf26;
     }
 }
 .catagoryInLight {
     border: 1px solid transparent;
-    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
     .glow {
         color: black;
         font-weight: bold;
         font-family: "Victor Mono", monospace;
-        text-decoration: underline wavy #ffbf26;
+        -webkit-text-decoration: underline wavy #ffbf26;
+                text-decoration: underline wavy #ffbf26;
     }
 }
 .cardInDark {
     background: #14181a;
     border: 1px solid #25292f;
-    box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+            box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
 .cardInLight {
     background: #f0f6fc;
     border: 1px solid transparent;
-    box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
 }
 .lightHeart {
     border: 2px dashed #000000;
