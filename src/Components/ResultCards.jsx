@@ -46,7 +46,7 @@ const ResultCards = memo(({ name, auth, Cors, desc, https, link }) => {
               }} />
             )
           }
-
+          <p className='tooltip'>Authentication</p>
         </div>
         <div className="cors cardSvgDiv">
           {
@@ -58,7 +58,7 @@ const ResultCards = memo(({ name, auth, Cors, desc, https, link }) => {
               }} />
             )
           }
-
+          <p className='tooltip'>CORS</p>
         </div>
         <div className="https cardSvgDiv">
           {
@@ -72,19 +72,18 @@ const ResultCards = memo(({ name, auth, Cors, desc, https, link }) => {
               }} />
             )
           }
-
+          <p className='tooltip'>HTTPS</p>
         </div>
         <a href={link} target='_blank' className="link cardSvgDiv">
           {
             name ? (
-              <><span>Link </span><GrLinkNext /></>
+              <><p>Link </p><GrLinkNext /></>
             ) : (
               <Skeleton style={{
                 width: '50px'
               }} />
             )
           }
-
         </a>
       </div>
     </div>
