@@ -15,7 +15,13 @@ const ResultCards = memo(({ name, auth, Cors, desc, https, link }) => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.1}} className={`ResultCards ${!darkMode ? "cardInLight" : "cardInDark"}`}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.1 }}
+      viewport={{ once: true }}
+      className={`ResultCards ${!darkMode ? "cardInLight" : "cardInDark"}`}
+    >
       <div className="logoImg">
         {name ? (
           <img

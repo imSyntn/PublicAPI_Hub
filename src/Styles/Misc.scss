@@ -1,102 +1,148 @@
-$inlinePadding: 100px; 
+$inlinePadding: 100px;
 
 .LightBtn {
-    background: white;
+  background: white;
 }
 .headerInDarkMode {
-    -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .headerInLightMode {
-    -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 .sunInDarkMode {
-    display: none;
+  display: none;
 }
 .moonInDarkMode {
-    display: none;
+  display: none;
 }
 .darkContainer {
-    background-color: #070709;
+  background-color: #070709;
 }
 .lightContainer {
-    background-color: white;
+  background-color: white;
 }
 .textInDarkMode {
-    color: rgba(255, 255, 255, 0.849);
+  color: rgba(255, 255, 255, 0.849);
 }
 .textInWhiteMode {
-    color: black;
-    font-weight: 600;
+  color: black;
+  font-weight: 600;
 }
 .h1InDarkMode {
-    background-image: -webkit-gradient(linear, left top, right top, from(#7f00ff), color-stop(#9b62ff), color-stop(#b99aff), color-stop(#dacdff), to(#ffffff));
-background-image: -o-linear-gradient(left, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
-background-image: linear-gradient(to right, #7f00ff, #9b62ff, #b99aff, #dacdff, #ffffff);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#7f00ff),
+    color-stop(#9b62ff),
+    color-stop(#b99aff),
+    color-stop(#dacdff),
+    to(#ffffff)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    #7f00ff,
+    #9b62ff,
+    #b99aff,
+    #dacdff,
+    #ffffff
+  );
+  background-image: linear-gradient(
+    to right,
+    #7f00ff,
+    #9b62ff,
+    #b99aff,
+    #dacdff,
+    #ffffff
+  );
 }
 .h1InLightMode {
-    background-image: -webkit-gradient(linear, left top, right top, from(#7f00ff), color-stop(#8900a1), color-stop(#6b0058), color-stop(#3c0225), to(#000000));
-background-image: -o-linear-gradient(left, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
-background-image: linear-gradient(to right, #7f00ff, #8900a1, #6b0058, #3c0225, #000000);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#7f00ff),
+    color-stop(#8900a1),
+    color-stop(#6b0058),
+    color-stop(#3c0225),
+    to(#000000)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    #7f00ff,
+    #8900a1,
+    #6b0058,
+    #3c0225,
+    #000000
+  );
+  background-image: linear-gradient(
+    to right,
+    #7f00ff,
+    #8900a1,
+    #6b0058,
+    #3c0225,
+    #000000
+  );
 }
 .hero-search {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 300px;
-    // border: 1px solid red;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 300px;
+  // border: 1px solid red;
 }
 .overlay {
+  height: 300px;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  @media screen and (max-width: 1085px) {
     height: 300px;
-    position: relative;
-    pointer-events: none;
-    z-index: 3;
-    @media screen and (max-width:1085px) {
-        height: 300px;
-    }
+  }
 }
 
 .catagoryInDark {
-    border: 1px solid #25292f;
-    -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
-            box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
-    .glow {
-        color: white;
-        font-family: "Victor Mono", monospace;
-        -webkit-text-decoration: underline wavy #ffbf26;
-                text-decoration: underline wavy #ffbf26;
-    }
+  border: 1px solid #25292f;
+  -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  .glow {
+    color: white;
+    font-family: "Victor Mono", monospace;
+    -webkit-text-decoration: underline wavy #ffbf26;
+    text-decoration: underline wavy #ffbf26;
+  }
 }
 .catagoryInLight {
-    border: 1px solid transparent;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
-            box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
-    .glow {
-        color: black;
-        font-weight: bold;
-        font-family: "Victor Mono", monospace;
-        -webkit-text-decoration: underline wavy #ffbf26;
-                text-decoration: underline wavy #ffbf26;
-    }
+  border: 1px solid transparent;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+  .glow {
+    color: black;
+    font-weight: bold;
+    font-family: "Victor Mono", monospace;
+    -webkit-text-decoration: underline wavy #ffbf26;
+    text-decoration: underline wavy #ffbf26;
+  }
 }
 .cardInDark {
-    background: #14181a;
-    border: 1px solid #25292f;
-    -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
-            box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  background: #14181a;
+  border: 1px solid #25292f;
+  -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
 .cardInLight {
-    background: #f0f6fc;
-    border: 1px solid transparent;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
-            box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+  background: #f0f6fc;
+  border: 1px solid transparent;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
 }
 .lightHeart {
-    border: 2px dashed #000000;
+  border: 2px dashed #000000;
 }
 .darkHeart {
-    border: 2px dashed #ffffff;
+  border: 2px dashed #ffffff;
 }
