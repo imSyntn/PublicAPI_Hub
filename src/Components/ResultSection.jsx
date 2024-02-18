@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext, useEffect, useState } from "react";
+import React, { lazy, Suspense, useContext, useEffect, useLayoutEffect, useState } from "react";
 import "../Styles/ResultSection.scss";
 import "../Styles/Misc.scss";
 import { ThemeContext } from "../App";
@@ -26,6 +26,16 @@ const ResultSection = () => {
   for (let i = 1; i <= totalPages; i++) {
     pageIndex.push(i);
   }
+
+  useLayoutEffect(()=>{
+    const width = window.innerWidth
+    if (width>1260) {
+      const numOfCardsInRow = Math.floor((width - 200)/360);
+      const numOfCardsInCol = 4;
+      const ppp = numOfCardsInRow * numOfCardsInCol;
+      setPostPerPage(ppp)
+    }
+  },[])
 
   useEffect(() => {
     setCurrentPage(1);
