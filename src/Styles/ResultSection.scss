@@ -48,6 +48,7 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            align-items: center;
 
             >.box {
                 height: 12px;
@@ -64,9 +65,20 @@
 
             .glow {
                 background: #cbe6ef;
+                background: orange;
                 width: 35px;
                 height: 12px;
                 border-radius: 10px;
+            }
+            svg {
+                // border: 1px solid gray;
+                font-size: 35px;
+                margin-inline: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover {
+                    fill: orange;
+                }
             }
         }
     }
