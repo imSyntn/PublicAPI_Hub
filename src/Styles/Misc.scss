@@ -30,62 +30,6 @@ $inlinePadding: 100px;
   color: black;
   font-weight: 600;
 }
-.h1InDarkMode {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#7f00ff),
-    color-stop(#9b62ff),
-    color-stop(#b99aff),
-    color-stop(#dacdff),
-    to(#ffffff)
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #7f00ff,
-    #9b62ff,
-    #b99aff,
-    #dacdff,
-    #ffffff
-  );
-  background-image: linear-gradient(
-    to right,
-    #7f00ff,
-    #9b62ff,
-    #b99aff,
-    #dacdff,
-    #ffffff
-  );
-}
-.h1InLightMode {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#7f00ff),
-    color-stop(#8900a1),
-    color-stop(#6b0058),
-    color-stop(#3c0225),
-    to(#000000)
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #7f00ff,
-    #8900a1,
-    #6b0058,
-    #3c0225,
-    #000000
-  );
-  background-image: linear-gradient(
-    to right,
-    #7f00ff,
-    #8900a1,
-    #6b0058,
-    #3c0225,
-    #000000
-  );
-}
 .hero-search {
   position: fixed;
   display: flex;
@@ -93,7 +37,6 @@ $inlinePadding: 100px;
   justify-content: space-evenly;
   width: 100%;
   height: 300px;
-  // border: 1px solid red;
 }
 .overlay {
   height: 300px;
