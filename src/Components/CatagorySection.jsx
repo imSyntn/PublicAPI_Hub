@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../Styles/CatagorySection.scss'
+import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
 import { showCatagoryContext } from '../App'
 import { searchContext } from '../App';
@@ -14,28 +15,38 @@ const CatagorySection = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(null)
 
-  useEffect(()=>{
+  useEffect(() => {
     if (searchIt.type === 'input') {
       setSelectedIndex(null)
     }
-  },[searchIt.type])
+  }, [searchIt.type])
 
   return (
-    <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`}  data-lenis-prevent>
+    <div className={`CatagorySection ${catagory ? 'visibleCatagory' : 'hiddenCatagory'} ${!darkMode ? 'catagoryInLight' : 'catagoryInDark'}`} data-lenis-prevent>
       <h2 className={!darkMode ? 'textInWhiteMode' : 'textInDarkMode'}>Catagories</h2>
       <div className="catagory-data">
         {
           catagoryNameData.map((item, i) => (
             <p key={i}
-              className={selectedIndex === i ? 'glow' : ''}
+              className={selectedIndex === i ? 'glow selectCatagory' : ''}
               onClick={() => {
-                setSearchIt({
-                  name: item.name,
-                  type: 'catagory'
-                })
-                setSelectedIndex(i)
+                if(searchIt.name !== item.name) {
+                  setSearchIt({
+                    name: item.name,
+                    type: 'catagory'
+                  })
+                  setSelectedIndex(i)
+                } else {
+                  setSearchIt({
+                    name: '',
+                    type: ''
+                  })
+                  setSelectedIndex(null)
+                }
               }}
-            >{item.name}</p>
+            >
+              {item.name}
+            </p>
           ))
         }
       </div>

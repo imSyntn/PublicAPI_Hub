@@ -16,7 +16,7 @@
 
 .CatagorySection {
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     padding-inline: 20px;
     position: fixed;
     height: 100dvh;
@@ -49,6 +49,8 @@
 
     p {
         margin: 15px;
+        margin-right: 0;
+        width: fit-content;
         cursor: pointer;
         color: rgb(135, 135, 135);
         -webkit-transition: -webkit-transform 0.2s;

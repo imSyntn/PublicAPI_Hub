@@ -33,52 +33,53 @@
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto-fit, min(340px));
+        padding-bottom: 50px;
 
         @media screen and (max-width:720px) {
             row-gap: 30px;
         }
-
-        >.paginationDiv {
-            position: absolute;
-            bottom: -60px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            align-items: center;
-
-            >.box {
-                height: 12px;
-                width: 12px;
-                background: gray;
-                border: none;
-                border-radius: 50%;
-                margin-inline: 5px;
-                cursor: pointer;
-                -webkit-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-            }
-
-            .glow {
-                background: #cbe6ef;
-                background: orange;
-                width: 35px;
-                height: 12px;
-                border-radius: 10px;
-            }
-            svg {
-                // border: 1px solid gray;
-                font-size: 35px;
-                margin-inline: 5px;
-                border-radius: 5px;
-                cursor: pointer;
-                &:hover {
-                    fill: orange;
-                }
+    }
+    >.paginationDiv {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        // position: absolute;
+        // bottom: -10px;
+        // left: 50%;
+        // transform: translateX(-50%);
+    
+        >.box {
+            height: 12px;
+            width: 12px;
+            background: gray;
+            border: none;
+            border-radius: 50%;
+            margin-inline: 5px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    
+        .glow {
+            background: #cbe6ef;
+            background: orange;
+            width: 35px;
+            height: 12px;
+            border-radius: 10px;
+        }
+    
+        svg {
+            font-size: 35px;
+            margin-inline: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+    
+            &:hover {
+                fill: orange;
             }
         }
     }

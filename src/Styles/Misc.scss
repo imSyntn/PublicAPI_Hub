@@ -3,33 +3,42 @@ $inlinePadding: 100px;
 .LightBtn {
   background: white;
 }
+
 .headerInDarkMode {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 .headerInLightMode {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+
 .sunInDarkMode {
   display: none;
 }
+
 .moonInDarkMode {
   display: none;
 }
+
 .darkContainer {
   background-color: #070709;
 }
+
 .lightContainer {
   background-color: white;
 }
+
 .textInDarkMode {
   color: rgba(255, 255, 255, 0.849);
 }
+
 .textInWhiteMode {
   color: black;
   font-weight: 600;
 }
+
 .hero-search {
   position: fixed;
   display: flex;
@@ -38,54 +47,84 @@ $inlinePadding: 100px;
   width: 100%;
   height: 300px;
 }
-.overlay {
+
+.overlay,
+.overlay2 {
   height: 300px;
   position: relative;
   pointer-events: none;
   z-index: 3;
+
   @media screen and (max-width: 1085px) {
     height: 300px;
   }
 }
 
+.overlay2 {
+  height: 180px;
+}
+
 .catagoryInDark {
   border: 1px solid #25292f;
   -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
-  box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  box-shadow: rgba(11, 11, 11, 0.16) 0px 1px 4px;
+
   .glow {
     color: white;
-    font-family: "Victor Mono", monospace;
-    -webkit-text-decoration: underline wavy #ffbf26;
-    text-decoration: underline wavy #ffbf26;
+  }
+
+  .selectCatagory {
+    width: 100%;
+    backdrop-filter: brightness(0%);
   }
 }
+
 .catagoryInLight {
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+
   .glow {
     color: black;
     font-weight: bold;
-    font-family: "Victor Mono", monospace;
-    -webkit-text-decoration: underline wavy #ffbf26;
-    text-decoration: underline wavy #ffbf26;
+  }
+
+  .selectCatagory {
+    width: 100%;
+    backdrop-filter: brightness(200%);
   }
 }
+
+.glow {
+  font-family: "Victor Mono", monospace;
+  -webkit-text-decoration: underline wavy #ffbf26;
+  text-decoration: underline wavy #ffbf26;
+}
+
+.selectCatagory {
+  position: sticky;
+  top: 0px;
+}
+
+
 .cardInDark {
   background: #14181a;
   border: 1px solid #25292f;
   -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
   box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
 }
+
 .cardInLight {
   background: #f0f6fc;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
 }
+
 .lightHeart {
   border: 2px dashed #000000;
 }
+
 .darkHeart {
   border: 2px dashed #ffffff;
 }

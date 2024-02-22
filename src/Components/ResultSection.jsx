@@ -1,4 +1,11 @@
-import React, { lazy, Suspense, useContext, useEffect, useLayoutEffect, useState } from "react";
+import React, {
+  lazy,
+  Suspense,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 import "../Styles/ResultSection.scss";
 import "../Styles/Misc.scss";
 import { ThemeContext } from "../App";
@@ -7,7 +14,6 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import useFetch from "../Hook/useFetch";
 import ResultCards from "./ResultCards";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useCallback } from "react";
 const NotFound = lazy(() => import("./NotFound"));
 
 const ResultSection = () => {
@@ -27,15 +33,15 @@ const ResultSection = () => {
     pageIndex.push(i);
   }
 
-  useLayoutEffect(()=>{
-    const width = window.innerWidth
-    if (width>1260) {
-      const numOfCardsInRow = Math.floor((width - 200)/360);
+  useLayoutEffect(() => {
+    const width = window.innerWidth;
+    if (width > 1260) {
+      const numOfCardsInRow = Math.floor((width - 200) / 360);
       const numOfCardsInCol = 4;
       const ppp = numOfCardsInRow * numOfCardsInCol;
-      setPostPerPage(ppp)
+      setPostPerPage(ppp);
     }
-  },[])
+  }, []);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -54,9 +60,8 @@ const ResultSection = () => {
 
   return (
     <div
-      className={`ResultSection ${
-        darkMode ? "darkContainer" : "lightContainer"
-      }`}
+      className={`ResultSection ${darkMode ? "darkContainer" : "lightContainer"
+        }`}
     >
       <h1>{searchIt.name ? searchIt.name : "Random"}</h1>
       <div className="results">
@@ -84,20 +89,22 @@ const ResultSection = () => {
             </Suspense>
           )}
         </SkeletonTheme>
-        {data.length!==0 && (
-          <div className="paginationDiv">
-            <FaAngleLeft onClick={handlePageinationLower} />
-            {pageIndex.map((i) => (
-              <div
-                className={`box ${currentPage === i && "glow"}`}
-                key={i}
-                onClick={() => setCurrentPage(i)}
-              ></div>
-            ))}
-            <FaAngleRight onClick={handlePageinationHigher} />
-          </div>
-        )}
       </div>
+      {
+          data.length !== 0 && (
+            <div className="paginationDiv">
+              <FaAngleLeft onClick={handlePageinationLower} />
+              {pageIndex.map((i) => (
+                <div
+                  className={`box ${currentPage === i && "glow"}`}
+                  key={i}
+                  onClick={() => setCurrentPage(i)}
+                ></div>
+              ))}
+              <FaAngleRight onClick={handlePageinationHigher} />
+            </div>
+          )
+        }
     </div>
   );
 };

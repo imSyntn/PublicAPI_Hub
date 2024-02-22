@@ -55,6 +55,7 @@ function App() {
                 </showCatagoryContext.Provider>
                 <ResultSection />
               </searchContext.Provider>
+              <div className="overlay2"></div>
               <Footer theme={darkMode} />
             </div>
           </ThemeContext.Provider>
