@@ -106,12 +106,14 @@ $inlinePadding: 100px;
   top: 0px;
 }
 
-
 .cardInDark {
   background: #14181a;
   border: 1px solid #25292f;
   -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
   box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
+  &:hover {
+    border: 2px solid white;
+  }
 }
 
 .cardInLight {
@@ -119,6 +121,9 @@ $inlinePadding: 100px;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
+  &:hover {
+    border: 2px solid black;
+  }
 }
 
 .lightHeart {
