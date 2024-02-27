@@ -10,17 +10,58 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 
-    >h1 {
+    >.name-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        // border: 1px solid green;
         margin-bottom: 20px;
-        font-size: 2.5rem;
-        font-weight: 400;
 
-        @media screen and (max-width:900px) {
-            padding-left: 20px;
+        >h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+
+            @media screen and (max-width:900px) {
+                padding-left: 20px;
+            }
+
+            @media screen and (max-width:700px) {
+                font-size: 2.2rem;
+            }
         }
 
-        @media screen and (max-width:700px) {
-            font-size: 2.2rem;
+        >.filterDiv {
+            // border: 1px solid yellow;
+            padding-block: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 340px;
+            @media screen and (max-width: 511px) {
+                width: 100%;
+            }
+            .filterSelect {
+                display: flex;
+                flex-direction: column;
+                >label {
+                    // color: white;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+                >select {
+                    border: 2px solid #393d47;
+                    background: transparent;
+                    border-radius: 7px;
+                    height: 35px;
+                    font-size: 17px;
+                    font-weight: 600;
+                    option {
+                        background: black;
+                        border: none;
+                    }
+                }
+            }
         }
     }
 
