@@ -99,14 +99,43 @@ header {
                 border-radius: 10px;
 
                 p {
-                    font-size: 16px;
+                    font-size: 15px;
                 }
 
                 >svg {
-                    font-size: 26px;
+                    font-size: 25px;
                 }
             }
         }
 
     }
+}
+.contribute {
+    display: none;
+    background: rgba(0, 0, 0, 0.568);
+    position: fixed;
+    top: 0;
+    left: 0;
+    // transform: translate(-50%,-50%);
+    z-index: 5;
+    >div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        >.btnBorderAnimation {
+            margin-block: 10px;
+            &::before {
+            border-radius: 10px;
+            }
+            button {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+.visible {
+    display: block;
+    height: 100vh;
+    width: 100vw;
 }
