@@ -1,11 +1,4 @@
-import React, {
-  lazy,
-  Suspense,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { lazy, Suspense, useContext, useEffect, useLayoutEffect, useState } from "react";
 import "../Styles/ResultSection.scss";
 import "../Styles/Misc.scss";
 import { ThemeContext } from "../App";
@@ -14,6 +7,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import useFetch from "../Hook/useFetch";
 import ResultCards from "./ResultCards";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Pagination from "./Pagination";
 const NotFound = lazy(() => import("./NotFound"));
 
 const ResultSection = () => {
@@ -59,10 +53,6 @@ const ResultSection = () => {
   useEffect(() => {
     setCurrentPage(1);
   }, [filteredData]);
-
-  // useEffect(() => {
-  //   setFilteredData(false)
-  // }, [searchIt]);
 
   const handlePageinationLower = () => {
     if (currentPage > 1) {
@@ -124,7 +114,7 @@ const ResultSection = () => {
                 <label htmlFor={item.name}>{item.name}:</label>
                 <select name={item.name} value={item.val} id={item.name} onChange={item.changeEvent}>
                   {
-                    item.options.map((set, j) => <option key={j} value={set}>{set}</option>)
+                    item.options.map((set, j) => <option key={j} value={set} className={darkMode ? 'darkOption' : 'whiteOption'}>{set}</option>)
                   }
 
                 </select>
@@ -141,19 +131,6 @@ const ResultSection = () => {
           {loading ? (
             new Array(10).fill("").map((a, i) => <ResultCards key={i} />)
           ) : data.length > 0 ? (
-            // filteredData.length>0 ? (
-            //   currentPageData.map((item, i) => (
-            //     <ResultCards
-            //       key={i}
-            //       name={item.API}
-            //       auth={item.Auth}
-            //       Cors={item.Cors}
-            //       desc={item.Description}
-            //       https={item.HTTPS}
-            //       link={item.Link}
-            //     />
-            //   ))
-            // ) : (
             currentPageData.map((item, i) => (
               <ResultCards
                 key={i}
@@ -174,18 +151,16 @@ const ResultSection = () => {
         </SkeletonTheme>
       </div>
       {
-        data.length !== 0 && (
-          <div className="paginationDiv">
-            <FaAngleLeft onClick={handlePageinationLower} />
-            {pageIndex.map((i) => (
-              <div
-                className={`box ${currentPage === i && "glow"}`}
-                key={i}
-                onClick={() => setCurrentPage(i)}
-              ></div>
-            ))}
-            <FaAngleRight onClick={handlePageinationHigher} />
-          </div>
+        currentPageData.length !== 0 && (
+          <Pagination 
+          currentPage={currentPage}
+          pageIndex = {pageIndex }
+          setCurrentPage = {setCurrentPage }
+          handlePageinationHigher = {handlePageinationHigher }
+          handlePageinationLower = {handlePageinationLower }
+          FaAngleLeft = {FaAngleLeft }
+          FaAngleRight = {FaAngleRight }
+          />
         )
       }
     </div>

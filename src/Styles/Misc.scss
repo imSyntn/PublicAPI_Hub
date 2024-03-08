@@ -107,7 +107,7 @@ $inlinePadding: 100px;
 }
 
 .cardInDark {
-  background: #14181a;
+  background: #14181a !important;
   border: 1px solid #25292f;
   -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
   box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
@@ -117,13 +117,22 @@ $inlinePadding: 100px;
 }
 
 .cardInLight {
-  background: #f0f6fc;
+  background: #f0f6fc !important;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   &:hover {
     border: 2px solid black;
   }
+}
+
+.darkOption {
+  background: black;
+  color: rgb(173, 173, 173);
+}
+.whiteOption {
+  background: rgb(255, 255, 255);
+  color: black;
 }
 
 .lightHeart {
