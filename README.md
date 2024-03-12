@@ -2,6 +2,12 @@
 
 Welcome to PublicAPI_Hub, your go-to platform for discovering and integrating public APIs. Explore a diverse collection of categorized APIs, designed to empower developers, data enthusiasts, and entrepreneurs.
 
+## URL
+
+- **Application Base Url:** [PublicAPIHub](publicapi-hub.vercel.app/)
+
+- **Api Base Url:** [PublicAPIHub_Api](publicapi-hub-api.vercel.app/)
+
 ## Features
 
 - **Comprehensive Categorization:** Easily find APIs tailored to your needs with our extensive category system.
@@ -66,7 +72,7 @@ Please make sure to follow the [Code of Conduct](CODE_OF_CONDUCT.md) while contr
 
 ## Connect with Us
 
-- Website: [PublicAPIHub.com](publicapi-hub.vercel.app/)
+- Website: [PublicAPIHub](publicapi-hub.vercel.app/)
 - Contact: [imsyntn@gmail.com](mailto:imsyntn@gmail.com)
 - Follow us on [Twitter](https://twitter.com/imSyntn) for the latest updates.
 
