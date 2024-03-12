@@ -4,9 +4,9 @@ Welcome to PublicAPI_Hub, your go-to platform for discovering and integrating pu
 
 ## URL
 
-- **Application Base Url:** [PublicAPIHub](publicapi-hub.vercel.app/)
+- **Application Base Url:** [PublicAPI_Hub](https://publicapi-hub.vercel.app/)
 
-- **Api Base Url:** [PublicAPIHub_Api](publicapi-hub-api.vercel.app/)
+- **Api Repository:** [PublicAPI_Hub_API](https://github.com/imSyntn/PublicAPI_Hub_API)
 
 ## Features
 
@@ -72,7 +72,7 @@ Please make sure to follow the [Code of Conduct](CODE_OF_CONDUCT.md) while contr
 
 ## Connect with Us
 
-- Website: [PublicAPIHub](publicapi-hub.vercel.app/)
+- Website: [PublicAPI_Hub](https://publicapi-hub.vercel.app/)
 - Contact: [imsyntn@gmail.com](mailto:imsyntn@gmail.com)
 - Follow us on [Twitter](https://twitter.com/imSyntn) for the latest updates.
 
