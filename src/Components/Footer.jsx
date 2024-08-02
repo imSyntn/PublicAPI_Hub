@@ -16,7 +16,7 @@ const Footer = ({theme}) => {
           <a href="https://twitter.com/PublicAPI_Hub" target='_blank'><FaXTwitter className={theme ?'white' :'black'} /></a>
           <a href="https://github.com/sponsors/imSyntn" target='_blank'><FaRegHeart className='heart' /></a>
         </div>
-        <p>Website by <a target='_blank' style={theme ? {color: 'white'} : {color: 'black',fontWeight: 600}} href="https://twitter.com/imSyntn">@imSyntn</a></p>
+        <p>Website by <a target='_blank' href="https://twitter.com/imSyntn">@imSyntn</a></p>
       </div>
     </footer>
   )

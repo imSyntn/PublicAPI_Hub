@@ -86,6 +86,11 @@ footer {
 
             >a {
                 text-decoration: none;
+                background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+                font-size: 20px;
+                font-weight: 600;
+                background-clip: text;
+                color: transparent;
             }
         }
     }

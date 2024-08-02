@@ -26,19 +26,19 @@
             font-size: 25px;
             padding-inline: 15px;
             background: transparent;
-            border: 2px solid #393d47;
+            border: 2px solid rgb(107, 82, 199);
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
 
             &:focus {
-                outline: 2px solid #646d7d;
+                outline: none;
             }
         }
 
         .Button {
             width: 41px;
             height: 40px;
-            border: 2px solid #473939;
+            border: 2px solid rgb(107, 82, 199);
             border-left: none;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -51,11 +51,11 @@
                 font-size: 20px;
                 fill: #393d47;
             }
+        }
 
-            &:hover {
-                border-left: 3px solid #646d7d;
-                outline: 2px solid #646d7d;
-            }
+        &:hover {
+            -webkit-box-shadow: 0 0 0 #e595ff, 0 0 60px rgba(130, 26, 250, 0.5);
+            box-shadow: 0 0 0 #e595ff, 0 0 60px rgba(130, 26, 250, 0.5);
         }
     }
 

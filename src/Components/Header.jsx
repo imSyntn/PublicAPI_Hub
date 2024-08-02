@@ -33,7 +33,7 @@ const Header = memo(() => {
                         <HiSun onClick={handleSunClick} className={!darkMode ? 'sunInDarkMode' : ''} />
                         <HiMoon onClick={handleMoonClick} className={darkMode ? 'moonInDarkMode' : ''} />
                     </div>
-                    <HeaderBtn Icon={FaGithub} text={'Contribute'} borderAnimation={true} clickEvent={() => setVisible(true)} />
+                    <HeaderBtn Icon={FaGithub} ID={`contribute`} text={'Contribute'} borderAnimation={true} clickEvent={() => setVisible(true)} />
                 </div>
             </header>
             <div className={`contribute ${visible && 'visible'}`} onClick={() => setVisible(false)}>

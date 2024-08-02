@@ -3,13 +3,13 @@ import '../Styles/Button.scss'
 import '../Styles/Misc.scss'
 import { ThemeContext } from '../App'
 
-const Button = memo(({ Icon, text, clickEvent, borderAnimation }) => {
+const Button = memo(({ Icon, text, clickEvent, ID, borderAnimation }) => {
 
   const { darkMode } = useContext(ThemeContext)
 
   return (
     <div className={borderAnimation ? 'btnBorderAnimation' : ''} role='button'>
-      <button className={`Button ${!darkMode ? 'LightBtn': ''}`} onClick={clickEvent}>
+      <button id={ID || ''} className={`Button ${!darkMode ? 'LightBtn': ''}`} onClick={clickEvent}>
         {Icon && <Icon style={borderAnimation?  darkMode ? {fill: 'white'} : {fill: 'black'} : {fill: 'gray'}} />}
         {text && <p style={darkMode ? {color: 'white'} : {color: 'black'}}>{text}</p>}
       </button>

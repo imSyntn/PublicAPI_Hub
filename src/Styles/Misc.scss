@@ -112,17 +112,21 @@ $inlinePadding: 100px;
   -webkit-box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
   box-shadow: rgba(255, 253, 253, 0.16) 0px 1px 4px;
   &:hover {
-    border: 2px solid white;
+    outline: 1px solid white;
+    box-shadow:  11px 11px 22px #171717,
+                 -11px -11px 22px #171717;
   }
 }
 
 .cardInLight {
   background: #f0f6fc !important;
-  border: 1px solid transparent;
+  border: 1px solid rgb(229, 229, 229);
   -webkit-box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 15px;
   &:hover {
-    border: 2px solid black;
+    outline: 1px solid black;
+    box-shadow:  11px 11px 22px #9f9f9f,
+                 -11px -11px 22px #ffffff;
   }
 }
 

@@ -1,5 +1,5 @@
 .Button {
-    border: 2px solid #393d47;
+    border: 2px solid rgb(107, 82, 199);
     cursor: pointer;
     height: 41px;
     width: 102px;
@@ -98,18 +98,20 @@
         position: absolute;
         top: -5;
         left: 0;
-        background-image: -webkit-gradient(linear, left bottom, left top, from(#7f00ff), color-stop(#ff00a5), color-stop(#ff1745), color-stop(#ffad00), to(#e1ff00));
-        background-image: -o-linear-gradient(bottom, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        background-image: linear-gradient(to right, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        background-size: cover;
+        // background-image: -webkit-gradient(linear, left bottom, left top, from(#7f00ff), color-stop(#ff00a5), color-stop(#ff1745), color-stop(#ffad00), to(#e1ff00));
+        // background-image: -o-linear-gradient(bottom, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+        // background-image: linear-gradient(to right, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
         -webkit-transition: -webkit-filter 0.2s;
         transition: -webkit-filter 0.2s;
         -o-transition: filter 0.2s;
         transition: filter 0.2s;
         transition: filter 0.2s, -webkit-filter 0.2s;
         -webkit-animation: rotate 2s infinite linear;
-        animation: rotate 1.5s infinite linear;
+        animation: rotate 10s infinite linear;
     }
+
     &:hover::before {
         -webkit-filter: blur(15px);
         filter: blur(15px);
@@ -117,87 +119,18 @@
 
     @keyframes rotate {
         0% {
-            background: linear-gradient(0deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        5% {
-            background: linear-gradient(30deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        10% {
-            background: linear-gradient(60deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        15% {
-            background: linear-gradient(90deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        20% {
-            background: linear-gradient(120deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        25% {
-            background: linear-gradient(150deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        30% {
-            background: linear-gradient(180deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        35% {
-            background: linear-gradient(210deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        40% {
-            background: linear-gradient(240deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        45% {
-            background: linear-gradient(270deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+            background-position: 0 0;
         }
 
         50% {
-            background: linear-gradient(300deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        55% {
-            background: linear-gradient(330deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        60% {
-            background: linear-gradient(360deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        65% {
-            background: linear-gradient(390deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        70% {
-            background: linear-gradient(420deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        75% {
-            background: linear-gradient(450deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        80% {
-            background: linear-gradient(480deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        85% {
-            background: linear-gradient(510deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        90% {
-            background: linear-gradient(540deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
-        }
-
-        95% {
-            background: linear-gradient(570deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+            background-position: 400% 0;
         }
 
         100% {
-            background: linear-gradient(600deg, #7f00ff, #ff00a5, #ff1745, #ffad00, #e1ff00);
+            background-position: 0 0;
         }
     }
+}
+#contribute {
+    padding-inline: 5px;
 }
