@@ -36,7 +36,7 @@ git clone https://github.com/your-username/PublicAPI_Hub.git
 2. Change into the project directory:
 
 ```bash
-cd comic-info
+cd PublicAPI_Hub
 ```
 
 3. Install dependencies
